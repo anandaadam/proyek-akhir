@@ -1,0 +1,438 @@
+CRITICAL - 2022-12-10 06:09:53 --> Invalid file: master-data/supplier/update.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('master-data/supplier/update.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/supplier/update', [], true)
+ 3 APPPATH\Controllers\Supplier.php(78): view('master-data/supplier/update')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 06:16:51 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Supplier.php on line 83.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('Supplier/index')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('Supplier/index')
+ 3 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\Router->handle('Supplier/index')
+ 4 SYSTEMPATH\CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 06:16:52 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Supplier.php on line 83.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('Supplier/create')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('Supplier/create')
+ 3 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\Router->handle('Supplier/create')
+ 4 SYSTEMPATH\CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 06:16:54 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Supplier.php on line 83.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('Supplier/create')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('Supplier/create')
+ 3 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\Router->handle('Supplier/create')
+ 4 SYSTEMPATH\CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 07:20:58 --> Undefined variable $messageValidation
+in APPPATH\Views\master-data\supplier\edit.php on line 26.
+ 1 APPPATH\Views\master-data\supplier\edit.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $messageValidation', 'APPPATH\\Views\\master-data\\supplier\\edit.php', 26)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\supplier\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/supplier/edit', [], true)
+ 5 APPPATH\Controllers\Supplier.php(82): view('master-data/supplier/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 07:21:20 --> Undefined variable $messageValidation
+in APPPATH\Views\master-data\supplier\edit.php on line 26.
+ 1 APPPATH\Views\master-data\supplier\edit.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $messageValidation', 'APPPATH\\Views\\master-data\\supplier\\edit.php', 26)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\supplier\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/supplier/edit', [], true)
+ 5 APPPATH\Controllers\Supplier.php(82): view('master-data/supplier/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 07:24:25 --> Attempt to read property "nama_supplier" on null
+in APPPATH\Views\master-data\supplier\edit.php on line 26.
+ 1 APPPATH\Views\master-data\supplier\edit.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "nama_supplier" on null', 'APPPATH\\Views\\master-data\\supplier\\edit.php', 26)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\supplier\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/supplier/edit', [], true)
+ 5 APPPATH\Controllers\Supplier.php(82): view('master-data/supplier/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 07:26:00 --> syntax error, unexpected token "}"
+in APPPATH\Views\master-data\supplier\edit.php on line 17.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/supplier/edit', [], true)
+ 3 APPPATH\Controllers\Supplier.php(82): view('master-data/supplier/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 07:27:30 --> Undefined property: mysqli::$nama_supplier
+in APPPATH\Views\master-data\supplier\edit.php on line 15.
+ 1 APPPATH\Views\master-data\supplier\edit.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$nama_supplier', 'APPPATH\\Views\\master-data\\supplier\\edit.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\supplier\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/supplier/edit', [], true)
+ 5 APPPATH\Controllers\Supplier.php(82): view('master-data/supplier/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 07:28:40 --> Undefined property: mysqli::$nama_supplier
+in APPPATH\Views\master-data\supplier\edit.php on line 15.
+ 1 APPPATH\Views\master-data\supplier\edit.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$nama_supplier', 'APPPATH\\Views\\master-data\\supplier\\edit.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\supplier\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/supplier/edit', [], true)
+ 5 APPPATH\Controllers\Supplier.php(82): view('master-data/supplier/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 08:33:39 --> Too few arguments to function App\Controllers\Supplier::update(), 0 passed in C:\xampp\htdocs\framework-4.2.10\system\CodeIgniter.php on line 927 and exactly 1 expected
+in APPPATH\Controllers\Supplier.php on line 86.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->update()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 08:34:24 --> Too few arguments to function App\Controllers\Supplier::edit(), 0 passed in C:\xampp\htdocs\framework-4.2.10\system\CodeIgniter.php on line 927 and exactly 1 expected
+in APPPATH\Controllers\Supplier.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 08:36:38 --> Too few arguments to function App\Controllers\Supplier::edit(), 0 passed in C:\xampp\htdocs\framework-4.2.10\system\CodeIgniter.php on line 927 and exactly 1 expected
+in APPPATH\Controllers\Supplier.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 08:38:05 --> Too few arguments to function App\Controllers\Supplier::edit(), 0 passed in C:\xampp\htdocs\framework-4.2.10\system\CodeIgniter.php on line 927 and exactly 1 expected
+in APPPATH\Controllers\Supplier.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 08:39:31 --> Too few arguments to function App\Controllers\Supplier::edit(), 0 passed in C:\xampp\htdocs\framework-4.2.10\system\CodeIgniter.php on line 927 and exactly 1 expected
+in APPPATH\Controllers\Supplier.php on line 69.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 08:42:06 --> Undefined array key "id_supplier"
+in APPPATH\Controllers\Supplier.php on line 116.
+ 1 APPPATH\Controllers\Supplier.php(116): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_supplier"', 'APPPATH\\Controllers\\Supplier.php', 116)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->update()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 08:42:48 --> Undefined variable $namaSupplier
+in APPPATH\Views\master-data\supplier\edit.php on line 32.
+ 1 APPPATH\Views\master-data\supplier\edit.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaSupplier', 'APPPATH\\Views\\master-data\\supplier\\edit.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\supplier\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/supplier/edit', [], true)
+ 5 APPPATH\Controllers\Supplier.php(82): view('master-data/supplier/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit('FCPATH\\.')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 08:43:58 --> Undefined variable $namaSupplier
+in APPPATH\Views\master-data\supplier\edit.php on line 32.
+ 1 APPPATH\Views\master-data\supplier\edit.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaSupplier', 'APPPATH\\Views\\master-data\\supplier\\edit.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\supplier\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/supplier/edit', [], true)
+ 5 APPPATH\Controllers\Supplier.php(82): view('master-data/supplier/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit('FCPATH\\.')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 08:46:44 --> Undefined variable $namaSupplier
+in APPPATH\Views\master-data\supplier\edit.php on line 32.
+ 1 APPPATH\Views\master-data\supplier\edit.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaSupplier', 'APPPATH\\Views\\master-data\\supplier\\edit.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\supplier\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/supplier/edit', [], true)
+ 5 APPPATH\Controllers\Supplier.php(82): view('master-data/supplier/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit('FCPATH\\.')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 08:48:27 --> Undefined array key "telepon_supplier"
+in APPPATH\Controllers\Supplier.php on line 92.
+ 1 APPPATH\Controllers\Supplier.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "telepon_supplier"', 'APPPATH\\Controllers\\Supplier.php', 92)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->update()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 09:29:02 --> Unsupported operand types: string + null
+in APPPATH\Views\master-data\supplier\edit.php on line 32.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/supplier/edit', [], true)
+ 4 APPPATH\Controllers\Supplier.php(82): view('master-data/supplier/edit', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit('1')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 11:07:42 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::getResult()
+in APPPATH\Views\master-data\supplier\index.php on line 29.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/supplier/index', [], true)
+ 4 APPPATH\Controllers\Supplier.php(18): view('master-data/supplier/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 11:08:04 --> Undefined array key "id_supplier"
+in APPPATH\Models\SupplierModel.php on line 59.
+ 1 APPPATH\Models\SupplierModel.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_supplier"', 'APPPATH\\Models\\SupplierModel.php', 59)
+ 2 APPPATH\Controllers\Supplier.php(135): App\Models\SupplierModel->removeSupplier('2')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->remove('2')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-10 11:08:42 --> mysqli_sql_exception: Unknown column 'idSupplier' in 'where clause' in C:\xampp\htdocs\framework-4.2.10\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\framework-4.2.10\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `supplie...', 0)
+#1 C:\xampp\htdocs\framework-4.2.10\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `supplie...')
+#2 C:\xampp\htdocs\framework-4.2.10\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `supplie...')
+#3 C:\xampp\htdocs\framework-4.2.10\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `supplie...', Array, false)
+#4 C:\xampp\htdocs\framework-4.2.10\app\Models\SupplierModel.php(59): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\framework-4.2.10\app\Controllers\Supplier.php(135): App\Models\SupplierModel->removeSupplier('2')
+#6 C:\xampp\htdocs\framework-4.2.10\system\CodeIgniter.php(927): App\Controllers\Supplier->remove('2')
+#7 C:\xampp\htdocs\framework-4.2.10\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+#8 C:\xampp\htdocs\framework-4.2.10\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\framework-4.2.10\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\framework-4.2.10\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-10 11:08:42 --> Unknown column 'idSupplier' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `supplier` SET `status_aktif` = 0
+WHERE `idSupplier` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `supplier` SET `status_aktif` = 0
+WHERE `idSupplier` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `supplier` SET `status_aktif` = 0
+WHERE `idSupplier` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `supplier` SET `status_aktif` = :status_aktif:
+WHERE `idSupplier` = :idSupplier:', [...], false)
+ 5 APPPATH\Models\SupplierModel.php(59): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\Supplier.php(135): App\Models\SupplierModel->removeSupplier('2')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->remove('2')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 11:37:19 --> Undefined property: stdClass::$nama_supplier
+in APPPATH\Views\master-data\supplier\index.php on line 32.
+ 1 APPPATH\Views\master-data\supplier\index.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_supplier', 'APPPATH\\Views\\master-data\\supplier\\index.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\supplier\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/supplier/index', [], true)
+ 5 APPPATH\Controllers\Supplier.php(18): view('master-data/supplier/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 11:38:16 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\PersediaanBahan.php(14): CodeIgniter\Model->__call('indexSupplier', [])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PersediaanBahan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanBahan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 11:39:59 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\PersediaanBahan.php(14): CodeIgniter\Model->__call('indexSupplier', [])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PersediaanBahan->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanBahan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 11:41:40 --> Undefined property: stdClass::$nama_satuan
+in APPPATH\Views\master-data\persediaan-bahan\index.php on line 34.
+ 1 APPPATH\Views\master-data\persediaan-bahan\index.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_satuan', 'APPPATH\\Views\\master-data\\persediaan-bahan\\index.php', 34)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\persediaan-bahan\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/persediaan-bahan/index', [], true)
+ 5 APPPATH\Controllers\PersediaanBahan.php(19): view('master-data/persediaan-bahan/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PersediaanBahan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanBahan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 11:48:52 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\PersediaanBahan.php(26): CodeIgniter\Model->__call('indexJenisSatuan', [])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PersediaanBahan->create()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanBahan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 12:00:26 --> Undefined property: mysqli::$nama_jenis_satuan
+in APPPATH\Views\master-data\persediaan-bahan\create.php on line 26.
+ 1 APPPATH\Views\master-data\persediaan-bahan\create.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$nama_jenis_satuan', 'APPPATH\\Views\\master-data\\persediaan-bahan\\create.php', 26)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\persediaan-bahan\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/persediaan-bahan/create', [], true)
+ 5 APPPATH\Controllers\PersediaanBahan.php(36): view('master-data/persediaan-bahan/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PersediaanBahan->create()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanBahan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 12:18:58 --> Undefined array key "id_jenis_satuan"
+in APPPATH\Models\PersediaanBahanModel.php on line 27.
+ 1 APPPATH\Models\PersediaanBahanModel.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_jenis_satuan"', 'APPPATH\\Models\\PersediaanBahanModel.php', 27)
+ 2 APPPATH\Controllers\PersediaanBahan.php(68): App\Models\PersediaanBahanModel->storePersediaanBahan()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PersediaanBahan->store()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanBahan))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-10 12:24:12 --> mysqli_sql_exception: Unknown column 'id_persediaan_bahan' in 'where clause' in C:\xampp\htdocs\framework-4.2.10\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\framework-4.2.10\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\framework-4.2.10\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\framework-4.2.10\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\framework-4.2.10\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\framework-4.2.10\app\Models\PersediaanBahanModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\framework-4.2.10\app\Controllers\PersediaanBahan.php(77): App\Models\PersediaanBahanModel->editPersediaanBahan('1')
+#6 C:\xampp\htdocs\framework-4.2.10\system\CodeIgniter.php(927): App\Controllers\PersediaanBahan->edit('1')
+#7 C:\xampp\htdocs\framework-4.2.10\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanBahan))
+#8 C:\xampp\htdocs\framework-4.2.10\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\framework-4.2.10\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\framework-4.2.10\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-10 12:24:12 --> Unknown column 'id_persediaan_bahan' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `persediaan_bahan`
+WHERE `id_persediaan_bahan` = \'1\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `persediaan_bahan`
+WHERE `id_persediaan_bahan` = \'1\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `persediaan_bahan`
+WHERE `id_persediaan_bahan` = \'1\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `persediaan_bahan`
+WHERE `id_persediaan_bahan` = :id_persediaan_bahan:', [...], false)
+ 5 APPPATH\Models\PersediaanBahanModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\PersediaanBahan.php(77): App\Models\PersediaanBahanModel->editPersediaanBahan('1')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PersediaanBahan->edit('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanBahan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 12:25:30 --> Undefined variable $databahan
+in APPPATH\Views\master-data\persediaan-bahan\edit.php on line 17.
+ 1 APPPATH\Views\master-data\persediaan-bahan\edit.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databahan', 'APPPATH\\Views\\master-data\\persediaan-bahan\\edit.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\persediaan-bahan\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/persediaan-bahan/edit', [], true)
+ 5 APPPATH\Controllers\PersediaanBahan.php(86): view('master-data/persediaan-bahan/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PersediaanBahan->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanBahan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 12:49:13 --> Unclosed '{' on line 33
+in APPPATH\Views\master-data\supplier\edit.php on line 59.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/supplier/edit', [], true)
+ 3 APPPATH\Controllers\Supplier.php(82): view('master-data/supplier/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 12:50:21 --> Unclosed '{' on line 33
+in APPPATH\Views\master-data\supplier\edit.php on line 59.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/supplier/edit', [], true)
+ 3 APPPATH\Controllers\Supplier.php(82): view('master-data/supplier/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->edit('1')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 14:48:14 --> Undefined variable $dataSupplier
+in APPPATH\Views\master-data\persediaan-bahan\edit.php on line 17.
+ 1 APPPATH\Views\master-data\persediaan-bahan\edit.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataSupplier', 'APPPATH\\Views\\master-data\\persediaan-bahan\\edit.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\persediaan-bahan\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/persediaan-bahan/edit', [], true)
+ 5 APPPATH\Controllers\PersediaanBahan.php(89): view('master-data/persediaan-bahan/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PersediaanBahan->edit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanBahan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 14:58:38 --> Unclosed '{' on line 41
+in APPPATH\Views\master-data\persediaan-bahan\edit.php on line 74.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/persediaan-bahan/edit', [], true)
+ 3 APPPATH\Controllers\PersediaanBahan.php(89): view('master-data/persediaan-bahan/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PersediaanBahan->edit('2')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanBahan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 14:59:17 --> Unclosed '{' on line 41
+in APPPATH\Views\master-data\persediaan-bahan\edit.php on line 74.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/persediaan-bahan/edit', [], true)
+ 3 APPPATH\Controllers\PersediaanBahan.php(89): view('master-data/persediaan-bahan/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PersediaanBahan->edit('2')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanBahan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-10 15:05:33 --> Undefined array key "id_bahan"
+in APPPATH\Controllers\PersediaanBahan.php on line 127.
+ 1 APPPATH\Controllers\PersediaanBahan.php(127): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_bahan"', 'APPPATH\\Controllers\\PersediaanBahan.php', 127)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PersediaanBahan->update()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PersediaanBahan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

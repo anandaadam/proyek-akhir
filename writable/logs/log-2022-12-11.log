@@ -1,0 +1,22 @@
+CRITICAL - 2022-12-11 07:35:42 --> Undefined variable $databahan
+in APPPATH\Views\transaksi\pembelian\create.php on line 50.
+ 1 APPPATH\Views\transaksi\pembelian\create.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databahan', 'APPPATH\\Views\\transaksi\\pembelian\\create.php', 50)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\transaksi\\pembelian\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('transaksi/pembelian/create', [], true)
+ 5 APPPATH\Controllers\Pembelian.php(27): view('transaksi/pembelian/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pembelian->create()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-11 10:20:00 --> Invalid file: dashbord.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashbord.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('dashbord', [], true)
+ 3 APPPATH\Controllers\Home.php(12): view('dashbord')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

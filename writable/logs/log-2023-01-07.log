@@ -1,0 +1,24 @@
+CRITICAL - 2023-01-07 16:45:28 --> Undefined variable $totalDebit
+in APPPATH\Views\laporan\jurnal-umum\show.php on line 6.
+ 1 APPPATH\Views\laporan\jurnal-umum\show.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalDebit', 'APPPATH\\Views\\laporan\\jurnal-umum\\show.php', 6)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\laporan\\jurnal-umum\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/jurnal-umum/show', [], true)
+ 5 APPPATH\Controllers\JurnalUmum.php(32): view('laporan/jurnal-umum/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\JurnalUmum->show('2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurnalUmum))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-07 16:45:36 --> Undefined variable $totalDebit
+in APPPATH\Views\laporan\jurnal-umum\show.php on line 6.
+ 1 APPPATH\Views\laporan\jurnal-umum\show.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $totalDebit', 'APPPATH\\Views\\laporan\\jurnal-umum\\show.php', 6)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\laporan\\jurnal-umum\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/jurnal-umum/show', [], true)
+ 5 APPPATH\Controllers\JurnalUmum.php(32): view('laporan/jurnal-umum/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\JurnalUmum->show('2023', '01')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurnalUmum))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

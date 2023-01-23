@@ -1,0 +1,179 @@
+ERROR - 2022-12-29 09:32:53 --> mysqli_sql_exception: MySQL server has gone away in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Models\PenggunaModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\Login.php(62): App\Models\PenggunaModel->login('adam@gmail.com')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\Login->login()
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-29 09:32:53 --> MySQL server has gone away
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `pengguna`
+JOIN `perusahaan` ON `perusahaan`.`id_perusahaan` = `pengguna`.`id_perusahaan`
+JOIN `tipe_pengguna` ON `tipe_pengguna`.`id_tipe_pengguna` = `pengguna`.`id_tipe_pengguna`
+WHERE `pengguna`.`email_pengguna` = \'adam@gmail.com\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pengguna`
+JOIN `perusahaan` ON `perusahaan`.`id_perusahaan` = `pengguna`.`id_perusahaan`
+JOIN `tipe_pengguna` ON `tipe_pengguna`.`id_tipe_pengguna` = `pengguna`.`id_tipe_pengguna`
+WHERE `pengguna`.`email_pengguna` = \'adam@gmail.com\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pengguna`
+JOIN `perusahaan` ON `perusahaan`.`id_perusahaan` = `pengguna`.`id_perusahaan`
+JOIN `tipe_pengguna` ON `tipe_pengguna`.`id_tipe_pengguna` = `pengguna`.`id_tipe_pengguna`
+WHERE `pengguna`.`email_pengguna` = \'adam@gmail.com\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pengguna`
+JOIN `perusahaan` ON `perusahaan`.`id_perusahaan` = `pengguna`.`id_perusahaan`
+JOIN `tipe_pengguna` ON `tipe_pengguna`.`id_tipe_pengguna` = `pengguna`.`id_tipe_pengguna`
+WHERE `pengguna`.`email_pengguna` = :pengguna.email_pengguna:', [...], false)
+ 5 APPPATH\Models\PenggunaModel.php(17): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Login.php(62): App\Models\PenggunaModel->login('adam@gmail.com')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Login->login()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 09:41:46 --> Undefined variable $data
+in APPPATH\Views\laporan\buku-besar\show.php on line 20.
+ 1 APPPATH\Views\laporan\buku-besar\show.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\laporan\\buku-besar\\show.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\laporan\\buku-besar\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 5 APPPATH\Controllers\BukuBesar.php(45): view('laporan/buku-besar/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '01')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 09:41:59 --> Undefined variable $data
+in APPPATH\Views\laporan\buku-besar\show.php on line 20.
+ 1 APPPATH\Views\laporan\buku-besar\show.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\laporan\\buku-besar\\show.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\laporan\\buku-besar\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 5 APPPATH\Controllers\BukuBesar.php(45): view('laporan/buku-besar/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '01')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 09:42:33 --> Undefined variable $data
+in APPPATH\Views\laporan\buku-besar\show.php on line 20.
+ 1 APPPATH\Views\laporan\buku-besar\show.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\laporan\\buku-besar\\show.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\laporan\\buku-besar\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 5 APPPATH\Controllers\BukuBesar.php(45): view('laporan/buku-besar/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '01')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 09:44:05 --> Undefined variable $data
+in APPPATH\Views\laporan\buku-besar\show.php on line 20.
+ 1 APPPATH\Views\laporan\buku-besar\show.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\laporan\\buku-besar\\show.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\laporan\\buku-besar\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 5 APPPATH\Controllers\BukuBesar.php(45): view('laporan/buku-besar/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '01')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 09:44:37 --> Undefined variable $data
+in APPPATH\Views\laporan\buku-besar\show.php on line 21.
+ 1 APPPATH\Views\laporan\buku-besar\show.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\laporan\\buku-besar\\show.php', 21)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\laporan\\buku-besar\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 5 APPPATH\Controllers\BukuBesar.php(45): view('laporan/buku-besar/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '01')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 09:44:51 --> Undefined variable $data
+in APPPATH\Views\laporan\buku-besar\show.php on line 22.
+ 1 APPPATH\Views\laporan\buku-besar\show.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\laporan\\buku-besar\\show.php', 22)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\laporan\\buku-besar\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 5 APPPATH\Controllers\BukuBesar.php(45): view('laporan/buku-besar/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '01')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 09:46:29 --> Undefined variable $data
+in APPPATH\Views\laporan\buku-besar\show.php on line 20.
+ 1 APPPATH\Views\laporan\buku-besar\show.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\laporan\\buku-besar\\show.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\laporan\\buku-besar\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 5 APPPATH\Controllers\BukuBesar.php(45): view('laporan/buku-besar/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '01')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 09:46:33 --> Undefined variable $data
+in APPPATH\Views\laporan\buku-besar\show.php on line 20.
+ 1 APPPATH\Views\laporan\buku-besar\show.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\laporan\\buku-besar\\show.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\laporan\\buku-besar\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 5 APPPATH\Controllers\BukuBesar.php(45): view('laporan/buku-besar/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 09:46:48 --> Undefined variable $data
+in APPPATH\Views\laporan\buku-besar\show.php on line 20.
+ 1 APPPATH\Views\laporan\buku-besar\show.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\laporan\\buku-besar\\show.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\laporan\\buku-besar\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 5 APPPATH\Controllers\BukuBesar.php(45): view('laporan/buku-besar/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '01')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 09:47:50 --> Undefined variable $data
+in APPPATH\Views\laporan\buku-besar\show.php on line 20.
+ 1 APPPATH\Views\laporan\buku-besar\show.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\laporan\\buku-besar\\show.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\laporan\\buku-besar\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 5 APPPATH\Controllers\BukuBesar.php(45): view('laporan/buku-besar/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '01')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 19:16:34 --> Too few arguments to function App\Controllers\Supplier::__construct(), 0 passed in C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php on line 889 and exactly 1 expected
+in APPPATH\Controllers\Supplier.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Supplier->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 19:25:26 --> trim(): Passing null to parameter #1 ($string) of type string is deprecated
+in APPPATH\Controllers\Supplier.php on line 103.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8192, 'trim(): Passing null to parameter #1 ($string) of type string is deprecated', 'APPPATH\\Controllers\\Supplier.php', 103)
+ 2 APPPATH\Controllers\Supplier.php(103): trim(null)
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->update()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

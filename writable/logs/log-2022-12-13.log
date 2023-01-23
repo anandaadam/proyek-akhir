@@ -1,0 +1,167 @@
+CRITICAL - 2022-12-13 03:56:10 --> Undefined array key "id_detail_pembelian"
+in APPPATH\Controllers\DetailPembelian.php on line 58.
+ 1 APPPATH\Controllers\DetailPembelian.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_detail_pembelian"', 'APPPATH\\Controllers\\DetailPembelian.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPembelian->cancel()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPembelian))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-13 03:56:18 --> Undefined array key "id_detail_pembelian"
+in APPPATH\Controllers\DetailPembelian.php on line 58.
+ 1 APPPATH\Controllers\DetailPembelian.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_detail_pembelian"', 'APPPATH\\Controllers\\DetailPembelian.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPembelian->cancel()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPembelian))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-13 03:57:53 --> Undefined array key "id_detail_pembelian"
+in APPPATH\Controllers\DetailPembelian.php on line 59.
+ 1 APPPATH\Controllers\DetailPembelian.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_detail_pembelian"', 'APPPATH\\Controllers\\DetailPembelian.php', 59)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPembelian->cancel()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPembelian))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-13 04:03:11 --> Undefined array key "id_detail_pembelian"
+in APPPATH\Controllers\DetailPembelian.php on line 59.
+ 1 APPPATH\Controllers\DetailPembelian.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_detail_pembelian"', 'APPPATH\\Controllers\\DetailPembelian.php', 59)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPembelian->cancel()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPembelian))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-13 04:03:18 --> Undefined array key "id_detail_pembelian"
+in APPPATH\Controllers\DetailPembelian.php on line 59.
+ 1 APPPATH\Controllers\DetailPembelian.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_detail_pembelian"', 'APPPATH\\Controllers\\DetailPembelian.php', 59)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPembelian->cancel()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPembelian))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-13 08:20:26 --> Undefined array key "jumlah_total_pembelian"
+in APPPATH\Controllers\DetailPembelian.php on line 67.
+ 1 APPPATH\Controllers\DetailPembelian.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jumlah_total_pembelian"', 'APPPATH\\Controllers\\DetailPembelian.php', 67)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPembelian->save()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPembelian))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-13 09:20:03 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''transaksi' at line 2 in C:\xampp\htdocs\polubi-snack\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `AUTO_IN...', 0)
+#1 C:\xampp\htdocs\polubi-snack\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `AUTO_IN...')
+#2 C:\xampp\htdocs\polubi-snack\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `AUTO_IN...')
+#3 C:\xampp\htdocs\polubi-snack\app\Models\PembelianModel.php(20): CodeIgniter\Database\BaseConnection->query('SELECT `AUTO_IN...')
+#4 C:\xampp\htdocs\polubi-snack\app\Controllers\Pembelian.php(51): App\Models\PembelianModel->storePembelian()
+#5 C:\xampp\htdocs\polubi-snack\system\CodeIgniter.php(927): App\Controllers\Pembelian->store()
+#6 C:\xampp\htdocs\polubi-snack\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+#7 C:\xampp\htdocs\polubi-snack\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-13 09:20:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''transaksi' at line 2
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `AUTO_INCREMENT` FROM  INFORMATION_SCHEMA.TABLES 
+                              WHERE TABLE_SCHEMA = \'polubi_snack\' AND TABLE_NAME = \'transaksi', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `AUTO_INCREMENT` FROM  INFORMATION_SCHEMA.TABLES 
+                              WHERE TABLE_SCHEMA = \'polubi_snack\' AND TABLE_NAME = \'transaksi')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `AUTO_INCREMENT` FROM  INFORMATION_SCHEMA.TABLES 
+                              WHERE TABLE_SCHEMA = \'polubi_snack\' AND TABLE_NAME = \'transaksi')
+ 4 APPPATH\Models\PembelianModel.php(20): CodeIgniter\Database\BaseConnection->query('SELECT `AUTO_INCREMENT` FROM  INFORMATION_SCHEMA.TABLES 
+                              WHERE TABLE_SCHEMA = \'polubi_snack\' AND TABLE_NAME = \'transaksi')
+ 5 APPPATH\Controllers\Pembelian.php(51): App\Models\PembelianModel->storePembelian()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pembelian->store()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-13 09:22:51 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+in SYSTEMPATH\Database\Query.php on line 335.
+ 1 SYSTEMPATH\Database\Query.php(335): strtr('INSERT INTO `pembelian` (`no_transaksi_pembelian`, `id_supplier`, `total_pembelian`, `tanggal_pembelian`, `tipe_pembayaran`, `status_aktif`) VALUES (:no_transaksi_pembelian:, :id_supplier:, :total_pembelian:, :tanggal_pembelian:, :tipe_pembayaran:, :status_aktif:)', [...])
+ 2 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('INSERT INTO `pembelian` (`no_transaksi_pembelian`, `id_supplier`, `total_pembelian`, `tanggal_pembelian`, `tipe_pembayaran`, `status_aktif`) VALUES (:no_transaksi_pembelian:, :id_supplier:, :total_pembelian:, :tanggal_pembelian:, :tipe_pembayaran:, :status_aktif:)', [...])
+ 3 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 4 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\Query->getQuery()
+ 5 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pembelian` (`no_transaksi_pembelian`, `id_supplier`, `total_pembelian`, `tanggal_pembelian`, `tipe_pembayaran`, `status_aktif`) VALUES (:no_transaksi_pembelian:, :id_supplier:, :total_pembelian:, :tanggal_pembelian:, :tipe_pembayaran:, :status_aktif:)', [...], false)
+ 6 APPPATH\Models\PembelianModel.php(41): CodeIgniter\Database\BaseBuilder->insert([...])
+ 7 APPPATH\Controllers\Pembelian.php(51): App\Models\PembelianModel->storePembelian()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pembelian->store()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-13 09:30:07 --> Undefined array key "AUTO_INCREMENT"
+in APPPATH\Models\PembelianModel.php on line 21.
+ 1 APPPATH\Models\PembelianModel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "AUTO_INCREMENT"', 'APPPATH\\Models\\PembelianModel.php', 21)
+ 2 APPPATH\Controllers\Pembelian.php(51): App\Models\PembelianModel->storePembelian()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pembelian->store()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-13 09:32:42 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Models\PembelianModel.php on line 21.
+ 1 APPPATH\Controllers\Pembelian.php(51): App\Models\PembelianModel->storePembelian()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pembelian->store()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-13 09:33:07 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$AUTO_INCREMENT
+in APPPATH\Models\PembelianModel.php on line 21.
+ 1 APPPATH\Models\PembelianModel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$AUTO_INCREMENT', 'APPPATH\\Models\\PembelianModel.php', 21)
+ 2 APPPATH\Controllers\Pembelian.php(51): App\Models\PembelianModel->storePembelian()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pembelian->store()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-13 09:33:38 --> Undefined array key 1
+in APPPATH\Models\PembelianModel.php on line 21.
+ 1 APPPATH\Models\PembelianModel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'APPPATH\\Models\\PembelianModel.php', 21)
+ 2 APPPATH\Controllers\Pembelian.php(51): App\Models\PembelianModel->storePembelian()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pembelian->store()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-13 09:34:59 --> Cannot use object of type stdClass as array
+in APPPATH\Models\PembelianModel.php on line 21.
+ 1 APPPATH\Controllers\Pembelian.php(51): App\Models\PembelianModel->storePembelian()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pembelian->store()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-13 09:35:18 --> Cannot use object of type stdClass as array
+in APPPATH\Models\PembelianModel.php on line 21.
+ 1 APPPATH\Controllers\Pembelian.php(51): App\Models\PembelianModel->storePembelian()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pembelian->store()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-13 09:35:34 --> Undefined array key "AUTO_INCREMENT"
+in APPPATH\Models\PembelianModel.php on line 21.
+ 1 APPPATH\Models\PembelianModel.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "AUTO_INCREMENT"', 'APPPATH\\Models\\PembelianModel.php', 21)
+ 2 APPPATH\Controllers\Pembelian.php(51): App\Models\PembelianModel->storePembelian()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pembelian->store()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-13 09:36:22 --> Cannot use object of type stdClass as array
+in APPPATH\Models\PembelianModel.php on line 22.
+ 1 APPPATH\Controllers\Pembelian.php(51): App\Models\PembelianModel->storePembelian()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pembelian->store()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-13 09:37:23 --> Cannot use object of type mysqli as array
+in APPPATH\Models\PembelianModel.php on line 22.
+ 1 APPPATH\Controllers\Pembelian.php(51): App\Models\PembelianModel->storePembelian()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pembelian->store()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

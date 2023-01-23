@@ -1,0 +1,52 @@
+CRITICAL - 2022-12-22 09:14:00 --> Undefined array key "jumlah_total_pembelian"
+in APPPATH\Models\DetailPembelianModel.php on line 55.
+ 1 APPPATH\Models\DetailPembelianModel.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "jumlah_total_pembelian"', 'APPPATH\\Models\\DetailPembelianModel.php', 55)
+ 2 APPPATH\Controllers\DetailPembelian.php(64): App\Models\DetailPembelianModel->saveDetailPembelian()
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailPembelian->save()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailPembelian))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-22 09:36:29 --> mysqli_sql_exception: Unknown column 'pembelian.no_transaksi' in 'order clause' in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Models\PembelianModel.php(34): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\Pembelian.php(14): App\Models\PembelianModel->indexPembelian()
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\Pembelian->index()
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+#8 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-22 09:36:29 --> Unknown column 'pembelian.no_transaksi' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `pembelian`
+JOIN `supplier` ON `supplier`.`id_supplier` = `pembelian`.`id_supplier`
+WHERE `pembelian`.`status_aktif` = 1
+ORDER BY `pembelian`.`no_transaksi` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pembelian`
+JOIN `supplier` ON `supplier`.`id_supplier` = `pembelian`.`id_supplier`
+WHERE `pembelian`.`status_aktif` = 1
+ORDER BY `pembelian`.`no_transaksi` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pembelian`
+JOIN `supplier` ON `supplier`.`id_supplier` = `pembelian`.`id_supplier`
+WHERE `pembelian`.`status_aktif` = 1
+ORDER BY `pembelian`.`no_transaksi` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pembelian`
+JOIN `supplier` ON `supplier`.`id_supplier` = `pembelian`.`id_supplier`
+WHERE `pembelian`.`status_aktif` = :pembelian.status_aktif:
+ORDER BY `pembelian`.`no_transaksi` ASC', [...], false)
+ 5 APPPATH\Models\PembelianModel.php(34): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pembelian.php(14): App\Models\PembelianModel->indexPembelian()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pembelian->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

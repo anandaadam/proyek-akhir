@@ -1,0 +1,837 @@
+ERROR - 2022-12-27 00:04:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? ORDER BY 1' at line 3 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT DISTINCT...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(14): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...', NULL)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(14): App\Models\BukuBesarModel->getPeriodeTahun()
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->index()
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 00:04:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? ORDER BY 1' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT DISTINCT(YEAR(jurnal.tanggal_jurnal)) as tahun FROM jurnal 
+        JOIN transaksi ON jurnal.no_transaksi = transaksi.no_transaksi 
+        WHERE transaksi.id_perusahaan = ? ORDER BY 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT(YEAR(jurnal.tanggal_jurnal)) as tahun FROM jurnal 
+        JOIN transaksi ON jurnal.no_transaksi = transaksi.no_transaksi 
+        WHERE transaksi.id_perusahaan = ? ORDER BY 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT(YEAR(jurnal.tanggal_jurnal)) as tahun FROM jurnal 
+        JOIN transaksi ON jurnal.no_transaksi = transaksi.no_transaksi 
+        WHERE transaksi.id_perusahaan = ? ORDER BY 1')
+ 4 APPPATH\Models\BukuBesarModel.php(14): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT(YEAR(jurnal.tanggal_jurnal)) as tahun FROM jurnal 
+        JOIN transaksi ON jurnal.no_transaksi = transaksi.no_transaksi 
+        WHERE transaksi.id_perusahaan = ? ORDER BY 1', null)
+ 5 APPPATH\Controllers\BukuBesar.php(14): App\Models\BukuBesarModel->getPeriodeTahun()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 00:05:22 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 3 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT DISTINCT...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(14): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...', NULL)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(14): App\Models\BukuBesarModel->getPeriodeTahun()
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->index()
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 00:05:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT DISTINCT(YEAR(jurnal.tanggal_jurnal)) as tahun FROM jurnal 
+        JOIN transaksi ON jurnal.no_transaksi = transaksi.no_transaksi 
+        WHERE transaksi.id_perusahaan = ?', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT(YEAR(jurnal.tanggal_jurnal)) as tahun FROM jurnal 
+        JOIN transaksi ON jurnal.no_transaksi = transaksi.no_transaksi 
+        WHERE transaksi.id_perusahaan = ?')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT(YEAR(jurnal.tanggal_jurnal)) as tahun FROM jurnal 
+        JOIN transaksi ON jurnal.no_transaksi = transaksi.no_transaksi 
+        WHERE transaksi.id_perusahaan = ?')
+ 4 APPPATH\Models\BukuBesarModel.php(14): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT(YEAR(jurnal.tanggal_jurnal)) as tahun FROM jurnal 
+        JOIN transaksi ON jurnal.no_transaksi = transaksi.no_transaksi 
+        WHERE transaksi.id_perusahaan = ?', null)
+ 5 APPPATH\Controllers\BukuBesar.php(14): App\Models\BukuBesarModel->getPeriodeTahun()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 00:06:19 --> mysqli_sql_exception: Unknown column 'jurnal.tahun' in 'order clause' in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT DISTINCT...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(14): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT...', '1')
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(14): App\Models\BukuBesarModel->getPeriodeTahun()
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->index()
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 00:06:19 --> Unknown column 'jurnal.tahun' in 'order clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT DISTINCT(YEAR(jurnal.tanggal_jurnal)) as tahun FROM jurnal 
+        JOIN transaksi ON jurnal.no_transaksi = transaksi.no_transaksi 
+        WHERE transaksi.id_perusahaan = \'1\' ORDER BY jurnal.tahun ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DISTINCT(YEAR(jurnal.tanggal_jurnal)) as tahun FROM jurnal 
+        JOIN transaksi ON jurnal.no_transaksi = transaksi.no_transaksi 
+        WHERE transaksi.id_perusahaan = \'1\' ORDER BY jurnal.tahun ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DISTINCT(YEAR(jurnal.tanggal_jurnal)) as tahun FROM jurnal 
+        JOIN transaksi ON jurnal.no_transaksi = transaksi.no_transaksi 
+        WHERE transaksi.id_perusahaan = \'1\' ORDER BY jurnal.tahun ASC')
+ 4 APPPATH\Models\BukuBesarModel.php(14): CodeIgniter\Database\BaseConnection->query('SELECT DISTINCT(YEAR(jurnal.tanggal_jurnal)) as tahun FROM jurnal 
+        JOIN transaksi ON jurnal.no_transaksi = transaksi.no_transaksi 
+        WHERE transaksi.id_perusahaan = ? ORDER BY jurnal.tahun ASC', '1')
+ 5 APPPATH\Controllers\BukuBesar.php(14): App\Models\BukuBesarModel->getPeriodeTahun()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 08:41:55 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? AND jurnal.debit_kredit = 'Debit' AND transaksi.id_perusahaan = ?
+        W...' at line 3 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(43): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE...', Array)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 08:41:55 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? AND jurnal.debit_kredit = 'Debit' AND transaksi.id_perusahaan = ?
+        W...' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?')
+ 4 APPPATH\Models\BukuBesarModel.php(43): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', [...])
+ 5 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 08:44:14 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? AND jurnal.debit_kredit = 'Debit' AND transaksi.id_perusahaan = ?
+        W...' at line 3 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(43): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE...', Array)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 08:44:14 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? AND jurnal.debit_kredit = 'Debit' AND transaksi.id_perusahaan = ?
+        W...' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?')
+ 4 APPPATH\Models\BukuBesarModel.php(43): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', [...])
+ 5 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 08:44:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? AND jurnal.debit_kredit = 'Debit' AND transaksi.id_perusahaan = ?
+        W...' at line 3 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(43): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE...', Array)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 08:44:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? AND jurnal.debit_kredit = 'Debit' AND transaksi.id_perusahaan = ?
+        W...' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?')
+ 4 APPPATH\Models\BukuBesarModel.php(43): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', [...])
+ 5 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 08:52:22 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2022-12'' at line 4 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE...', Array)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 08:52:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2022-12'' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2022-12\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2022-12\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2022-12\'')
+ 4 APPPATH\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', [...])
+ 5 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 08:52:34 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2022-12'' at line 4 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE...', Array)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 08:52:34 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2022-12'' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2022-12\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2022-12\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2022-12\'')
+ 4 APPPATH\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', [...])
+ 5 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 08:56:37 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2023-12'' at line 4 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE...', Array)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 08:56:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2023-12'' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'')
+ 4 APPPATH\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', [...])
+ 5 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 08:56:45 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2023-12'' at line 4 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE...', Array)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 08:56:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2023-12'' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'')
+ 4 APPPATH\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', [...])
+ 5 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 21:55:08 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2023-12'' at line 4 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE...', Array)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 21:55:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2023-12'' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'')
+ 4 APPPATH\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', [...])
+ 5 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 21:55:22 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2023-12'' at line 4 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE...', Array)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 21:55:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2023-12'' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'')
+ 4 APPPATH\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', [...])
+ 5 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 21:59:26 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2023-12'' at line 4 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE...', Array)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 21:59:26 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2023-12'' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'')
+ 4 APPPATH\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'', [...])
+ 5 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 22:01:24 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2023-12'' at line 4 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE...', Array)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 22:01:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2023-12'' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'')
+ 4 APPPATH\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', [...])
+ 5 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 22:01:33 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2023-12'' at line 4 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE...', Array)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 22:01:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2023-12'' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2023-12\'')
+ 4 APPPATH\Models\BukuBesarModel.php(45): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Debit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', [...])
+ 5 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 22:10:41 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2022-12'' at line 4 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(77): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE...', Array)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(32): App\Models\BukuBesarModel->getNominalCredit('11111', '2022', '12')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 22:10:41 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2022-12'' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Kredit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2022-12\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Kredit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2022-12\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Kredit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2022-12\'')
+ 4 APPPATH\Models\BukuBesarModel.php(77): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Kredit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', [...])
+ 5 APPPATH\Controllers\BukuBesar.php(32): App\Models\BukuBesarModel->getNominalCredit('11111', '2022', '12')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 22:10:54 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2022-12'' at line 4 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(77): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE...', Array)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(32): App\Models\BukuBesarModel->getNominalCredit('11111', '2022', '12')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 22:10:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2022-12'' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Kredit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2022-12\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Kredit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2022-12\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Kredit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2022-12\'')
+ 4 APPPATH\Models\BukuBesarModel.php(77): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Kredit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', [...])
+ 5 APPPATH\Controllers\BukuBesar.php(32): App\Models\BukuBesarModel->getNominalCredit('11111', '2022', '12')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 22:11:02 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2022-12'' at line 4 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE...')
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BukuBesarModel.php(77): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE...', Array)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BukuBesar.php(32): App\Models\BukuBesarModel->getNominalCredit('11111', '2022', '12')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-27 22:11:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE DATE_FORMAT(jurnal.tanggal_jurnal, '%Y-%m') < '2022-12'' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Kredit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2022-12\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Kredit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2022-12\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = \'11111\' AND jurnal.debit_kredit = \'Kredit\' AND transaksi.id_perusahaan = \'1\'
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < \'2022-12\'')
+ 4 APPPATH\Models\BukuBesarModel.php(77): CodeIgniter\Database\BaseConnection->query('SELECT COALESCE(SUM(jurnal.nominal_jurnal), 0) AS \'Debit\' FROM jurnal join transaksi 
+        ON transaksi.no_transaksi = jurnal.no_transaksi
+        WHERE jurnal.kode_akun = ? AND jurnal.debit_kredit = \'Kredit\' AND transaksi.id_perusahaan = ?
+        WHERE DATE_FORMAT(jurnal.tanggal_jurnal, \'%Y-%m\') < ?', [...])
+ 5 APPPATH\Controllers\BukuBesar.php(32): App\Models\BukuBesarModel->getNominalCredit('11111', '2022', '12')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 22:15:19 --> Undefined property: mysqli::$nominal_jurnal
+in APPPATH\Models\BukuBesarModel.php on line 70.
+ 1 APPPATH\Models\BukuBesarModel.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$nominal_jurnal', 'APPPATH\\Models\\BukuBesarModel.php', 70)
+ 2 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 22:15:23 --> Undefined property: mysqli::$nominal_jurnal
+in APPPATH\Models\BukuBesarModel.php on line 70.
+ 1 APPPATH\Models\BukuBesarModel.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$nominal_jurnal', 'APPPATH\\Models\\BukuBesarModel.php', 70)
+ 2 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 22:15:28 --> Undefined property: mysqli::$nominal_jurnal
+in APPPATH\Models\BukuBesarModel.php on line 70.
+ 1 APPPATH\Models\BukuBesarModel.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$nominal_jurnal', 'APPPATH\\Models\\BukuBesarModel.php', 70)
+ 2 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '01')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '01')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 22:15:38 --> Undefined property: mysqli::$nominal_jurnal
+in APPPATH\Models\BukuBesarModel.php on line 70.
+ 1 APPPATH\Models\BukuBesarModel.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$nominal_jurnal', 'APPPATH\\Models\\BukuBesarModel.php', 70)
+ 2 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '01')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '01')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 22:17:08 --> Unclosed '{' on line 22
+in APPPATH\Views\laporan\buku-besar\show.php on line 25.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 3 APPPATH\Controllers\BukuBesar.php(43): view('laporan/buku-besar/show', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 22:17:23 --> Unclosed '{' on line 22
+in APPPATH\Views\laporan\buku-besar\show.php on line 25.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 3 APPPATH\Controllers\BukuBesar.php(43): view('laporan/buku-besar/show', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 22:18:02 --> Unclosed '{' on line 22
+in APPPATH\Views\laporan\buku-besar\show.php on line 25.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 3 APPPATH\Controllers\BukuBesar.php(43): view('laporan/buku-besar/show', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 22:58:32 --> Unsupported operand types: CodeIgniter\Database\MySQLi\Result - CodeIgniter\Database\MySQLi\Result
+in APPPATH\Controllers\BukuBesar.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 22:58:40 --> Unsupported operand types: CodeIgniter\Database\MySQLi\Result - CodeIgniter\Database\MySQLi\Result
+in APPPATH\Controllers\BukuBesar.php on line 33.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 23:01:03 --> Undefined property: mysqli::$nominal_jurnal
+in APPPATH\Models\BukuBesarModel.php on line 69.
+ 1 APPPATH\Models\BukuBesarModel.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$nominal_jurnal', 'APPPATH\\Models\\BukuBesarModel.php', 69)
+ 2 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 23:01:08 --> Undefined property: mysqli::$nominal_jurnal
+in APPPATH\Models\BukuBesarModel.php on line 69.
+ 1 APPPATH\Models\BukuBesarModel.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$nominal_jurnal', 'APPPATH\\Models\\BukuBesarModel.php', 69)
+ 2 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 23:01:14 --> Undefined property: mysqli::$nominal_jurnal
+in APPPATH\Models\BukuBesarModel.php on line 69.
+ 1 APPPATH\Models\BukuBesarModel.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$nominal_jurnal', 'APPPATH\\Models\\BukuBesarModel.php', 69)
+ 2 APPPATH\Controllers\BukuBesar.php(31): App\Models\BukuBesarModel->getNominalDebit('11111', '2022', '12')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 23:02:19 --> Unclosed '{' on line 22
+in APPPATH\Views\laporan\buku-besar\show.php on line 25.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 3 APPPATH\Controllers\BukuBesar.php(43): view('laporan/buku-besar/show', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 23:02:30 --> Unclosed '{' on line 22
+in APPPATH\Views\laporan\buku-besar\show.php on line 25.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 3 APPPATH\Controllers\BukuBesar.php(43): view('laporan/buku-besar/show', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '12')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 23:07:57 --> Unclosed '{' on line 22
+in APPPATH\Views\laporan\buku-besar\show.php on line 25.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 3 APPPATH\Controllers\BukuBesar.php(43): view('laporan/buku-besar/show', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '01')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 23:08:05 --> Unclosed '{' on line 22
+in APPPATH\Views\laporan\buku-besar\show.php on line 25.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 3 APPPATH\Controllers\BukuBesar.php(43): view('laporan/buku-besar/show', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '01')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 23:08:34 --> Unclosed '{' on line 22
+in APPPATH\Views\laporan\buku-besar\show.php on line 25.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 3 APPPATH\Controllers\BukuBesar.php(43): view('laporan/buku-besar/show', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '01')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 23:08:45 --> Unclosed '{' on line 22
+in APPPATH\Views\laporan\buku-besar\show.php on line 25.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 3 APPPATH\Controllers\BukuBesar.php(43): view('laporan/buku-besar/show', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '01')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 23:08:54 --> Unclosed '{' on line 22
+in APPPATH\Views\laporan\buku-besar\show.php on line 25.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('laporan/buku-besar/show', [], true)
+ 3 APPPATH\Controllers\BukuBesar.php(43): view('laporan/buku-besar/show', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2022', '03')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

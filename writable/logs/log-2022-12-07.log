@@ -1,0 +1,10 @@
+CRITICAL - 2022-12-07 03:16:55 --> Invalid file: layouts/header.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('layouts/header.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('layouts/header', [], true)
+ 3 APPPATH\Controllers\Supplier.php(9): view('layouts/header')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->indexSupplier()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

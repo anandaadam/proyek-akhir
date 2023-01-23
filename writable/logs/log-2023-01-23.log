@@ -1,0 +1,78 @@
+CRITICAL - 2023-01-23 00:08:49 --> Undefined variable $messageValidation
+in APPPATH\Views\master-data\bill-of-material\create.php on line 18.
+ 1 APPPATH\Views\master-data\bill-of-material\create.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $messageValidation', 'APPPATH\\Views\\master-data\\bill-of-material\\create.php', 18)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\bill-of-material\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/bill-of-material/create', [], true)
+ 5 APPPATH\Controllers\BillOfMaterial.php(58): view('master-data/bill-of-material/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 00:10:16 --> Undefined variable $messageValidation
+in APPPATH\Views\master-data\bill-of-material\create.php on line 18.
+ 1 APPPATH\Views\master-data\bill-of-material\create.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $messageValidation', 'APPPATH\\Views\\master-data\\bill-of-material\\create.php', 18)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\bill-of-material\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/bill-of-material/create', [], true)
+ 5 APPPATH\Controllers\BillOfMaterial.php(59): view('master-data/bill-of-material/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 00:11:10 --> Undefined variable $messageValidation
+in APPPATH\Views\master-data\bill-of-material\create.php on line 18.
+ 1 APPPATH\Views\master-data\bill-of-material\create.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $messageValidation', 'APPPATH\\Views\\master-data\\bill-of-material\\create.php', 18)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\bill-of-material\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/bill-of-material/create', [], true)
+ 5 APPPATH\Controllers\BillOfMaterial.php(59): view('master-data/bill-of-material/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 00:11:45 --> Undefined property: stdClass::$Kuantitas
+in APPPATH\Views\master-data\bill-of-material\show.php on line 30.
+ 1 APPPATH\Views\master-data\bill-of-material\show.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$Kuantitas', 'APPPATH\\Views\\master-data\\bill-of-material\\show.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\bill-of-material\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/bill-of-material/show', [], true)
+ 5 APPPATH\Controllers\BillOfMaterial.php(59): view('master-data/bill-of-material/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 00:45:26 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\BillOfMaterial.php(39): CodeIgniter\Model->__call('getDataProduk', [])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->create()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 00:46:37 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\BillOfMaterial.php(39): CodeIgniter\Model->__call('getDataProduk', [])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->create()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 00:46:57 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\BillOfMaterial.php(39): CodeIgniter\Model->__call('getDataProduk', [])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->create()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

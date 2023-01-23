@@ -1,0 +1,77 @@
+CRITICAL - 2022-12-15 10:07:28 --> Undefined property: stdClass::$no_transaksip_pembayaran_utang_pembelian
+in APPPATH\Views\utang-pembelian\show.php on line 48.
+ 1 APPPATH\Views\utang-pembelian\show.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$no_transaksip_pembayaran_utang_pembelian', 'APPPATH\\Views\\utang-pembelian\\show.php', 48)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\utang-pembelian\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('utang-pembelian/show', [], true)
+ 5 APPPATH\Controllers\UtangPembelian.php(31): view('utang-pembelian/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UtangPembelian->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UtangPembelian))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 10:07:47 --> Undefined property: stdClass::$nama_supplier
+in APPPATH\Views\utang-pembelian\show.php on line 50.
+ 1 APPPATH\Views\utang-pembelian\show.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_supplier', 'APPPATH\\Views\\utang-pembelian\\show.php', 50)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\utang-pembelian\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('utang-pembelian/show', [], true)
+ 5 APPPATH\Controllers\UtangPembelian.php(31): view('utang-pembelian/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UtangPembelian->show('1')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UtangPembelian))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 10:52:05 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Pembelian.php(66): CodeIgniter\Model->__call('showPembelian', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pembelian->show('1')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-15 10:52:25 --> mysqli_sql_exception: Unknown column 'detail_pembelian.no_transaksi_utang_pembelian' in 'where clause' in C:\xampp\htdocs\polubi-snack\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\polubi-snack\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\polubi-snack\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\polubi-snack\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\polubi-snack\app\Models\PembelianModel.php(124): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\polubi-snack\app\Controllers\Pembelian.php(66): App\Models\PembelianModel->showPembelian('1')
+#6 C:\xampp\htdocs\polubi-snack\system\CodeIgniter.php(927): App\Controllers\Pembelian->show('1')
+#7 C:\xampp\htdocs\polubi-snack\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+#8 C:\xampp\htdocs\polubi-snack\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\polubi-snack\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\polubi-snack\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-15 10:52:25 --> Unknown column 'detail_pembelian.no_transaksi_utang_pembelian' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `detail_pembelian`
+JOIN `persediaan_bahan` ON `persediaan_bahan`.`id_bahan` = `detail_pembelian`.`id_bahan`
+WHERE `detail_pembelian`.`no_transaksi_utang_pembelian` = \'1\'
+AND `detail_pembelian`.`status_aktif` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `detail_pembelian`
+JOIN `persediaan_bahan` ON `persediaan_bahan`.`id_bahan` = `detail_pembelian`.`id_bahan`
+WHERE `detail_pembelian`.`no_transaksi_utang_pembelian` = \'1\'
+AND `detail_pembelian`.`status_aktif` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `detail_pembelian`
+JOIN `persediaan_bahan` ON `persediaan_bahan`.`id_bahan` = `detail_pembelian`.`id_bahan`
+WHERE `detail_pembelian`.`no_transaksi_utang_pembelian` = \'1\'
+AND `detail_pembelian`.`status_aktif` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `detail_pembelian`
+JOIN `persediaan_bahan` ON `persediaan_bahan`.`id_bahan` = `detail_pembelian`.`id_bahan`
+WHERE `detail_pembelian`.`no_transaksi_utang_pembelian` = :detail_pembelian.no_transaksi_utang_pembelian:
+AND `detail_pembelian`.`status_aktif` = :detail_pembelian.status_aktif:', [...], false)
+ 5 APPPATH\Models\PembelianModel.php(124): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Pembelian.php(66): App\Models\PembelianModel->showPembelian('1')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Pembelian->show('1')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pembelian))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

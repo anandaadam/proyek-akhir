@@ -1,0 +1,19 @@
+CRITICAL - 2023-01-04 19:34:07 --> syntax error, unexpected identifier "SELECT", expecting ")"
+in APPPATH\Models\BukuBesarModel.php on line 93.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\BukuBesarModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\BukuBesarModel')
+ 3 APPPATH\Controllers\BukuBesar.php(12): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\BukuBesarModel')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-04 19:41:55 --> Undefined variable $query
+in APPPATH\Models\BukuBesarModel.php on line 84.
+ 1 APPPATH\Models\BukuBesarModel.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'APPPATH\\Models\\BukuBesarModel.php', 84)
+ 2 APPPATH\Controllers\BukuBesar.php(32): App\Models\BukuBesarModel->getNominalCredit('11111', '2023', '01')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BukuBesar->show('11111', '2023', '01')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuBesar))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

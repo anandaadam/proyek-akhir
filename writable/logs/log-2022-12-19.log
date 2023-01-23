@@ -1,0 +1,302 @@
+CRITICAL - 2022-12-19 18:40:14 --> Undefined variable $dataBahan
+in APPPATH\Views\transaksi\detail-retur-pembelian\create.php on line 20.
+ 1 APPPATH\Views\transaksi\detail-retur-pembelian\create.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataBahan', 'APPPATH\\Views\\transaksi\\detail-retur-pembelian\\create.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\transaksi\\detail-retur-pembelian\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('transaksi/detail-retur-pembelian/create', [], true)
+ 5 APPPATH\Controllers\DetailReturPembelian.php(33): view('transaksi/detail-retur-pembelian/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailReturPembelian->create()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailReturPembelian))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 18:41:32 --> Undefined variable $dataBahan
+in APPPATH\Views\transaksi\detail-retur-pembelian\create.php on line 20.
+ 1 APPPATH\Views\transaksi\detail-retur-pembelian\create.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataBahan', 'APPPATH\\Views\\transaksi\\detail-retur-pembelian\\create.php', 20)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\transaksi\\detail-retur-pembelian\\create.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('transaksi/detail-retur-pembelian/create', [], true)
+ 5 APPPATH\Controllers\DetailReturPembelian.php(27): view('transaksi/detail-retur-pembelian/create', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailReturPembelian->create()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailReturPembelian))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 19:53:32 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\DetailReturPembelian.php(18): CodeIgniter\Model->__call('getReturListBahan', [])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailReturPembelian->create()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailReturPembelian))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 19:54:07 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\DetailReturPembelian.php(18): CodeIgniter\Model->__call('getReturListBahan', [])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailReturPembelian->create()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailReturPembelian))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 19:55:15 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\DetailReturPembelian.php(18): CodeIgniter\Model->__call('getReturListBahan', [])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailReturPembelian->create()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailReturPembelian))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 19:56:03 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\ReturPembelian.php on line 106.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('ReturPembelian/create/TRS1612220001')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('ReturPembelian/create/TRS1612220001')
+ 3 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\Router->handle('ReturPembelian/create/TRS1612220001')
+ 4 SYSTEMPATH\CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 19:56:05 --> syntax error, unexpected token "public"
+in APPPATH\Controllers\ReturPembelian.php on line 106.
+ 1 SYSTEMPATH\Router\Router.php(499): CodeIgniter\Router\AutoRouter->getRoute('ReturPembelian/create')
+ 2 SYSTEMPATH\Router\Router.php(205): CodeIgniter\Router\Router->autoRoute('ReturPembelian/create')
+ 3 SYSTEMPATH\CodeIgniter.php(802): CodeIgniter\Router\Router->handle('ReturPembelian/create')
+ 4 SYSTEMPATH\CodeIgniter.php(430): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 19:56:23 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\DetailReturPembelian.php(18): CodeIgniter\Model->__call('getReturListBahan', [])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailReturPembelian->create()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailReturPembelian))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 19:56:51 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\DetailReturPembelian.php(18): CodeIgniter\Model->__call('getReturListBahan', [])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailReturPembelian->create()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailReturPembelian))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 19:57:36 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\DetailReturPembelian.php(18): CodeIgniter\Model->__call('getReturListBahan', [])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailReturPembelian->create()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailReturPembelian))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 19:59:17 --> Undefined property: stdClass::$subtotal_pembelian
+in APPPATH\Views\transaksi\detail-retur-pembelian\list-item-table.php on line 4.
+ 1 APPPATH\Views\transaksi\detail-retur-pembelian\list-item-table.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$subtotal_pembelian', 'APPPATH\\Views\\transaksi\\detail-retur-pembelian\\list-item-table.php', 4)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\transaksi\\detail-retur-pembelian\\list-item-table.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('transaksi/detail-retur-pembelian/list-item-table', [], true)
+ 5 APPPATH\Controllers\DetailReturPembelian.php(49): view('transaksi/detail-retur-pembelian/list-item-table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailReturPembelian->item()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailReturPembelian))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 19:59:43 --> Undefined property: stdClass::$subtotal_pembelian
+in APPPATH\Views\transaksi\detail-retur-pembelian\list-item-table.php on line 4.
+ 1 APPPATH\Views\transaksi\detail-retur-pembelian\list-item-table.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$subtotal_pembelian', 'APPPATH\\Views\\transaksi\\detail-retur-pembelian\\list-item-table.php', 4)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\transaksi\\detail-retur-pembelian\\list-item-table.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('transaksi/detail-retur-pembelian/list-item-table', [], true)
+ 5 APPPATH\Controllers\DetailReturPembelian.php(49): view('transaksi/detail-retur-pembelian/list-item-table', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailReturPembelian->item()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailReturPembelian))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 20:00:03 --> Undefined property: stdClass::$total_utang_pembelian
+in APPPATH\Models\DetailReturPembelianModel.php on line 58.
+ 1 APPPATH\Models\DetailReturPembelianModel.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$total_utang_pembelian', 'APPPATH\\Models\\DetailReturPembelianModel.php', 58)
+ 2 APPPATH\Models\DetailReturPembelianModel.php(67): App\Models\DetailReturPembelianModel->getDataUtang()
+ 3 APPPATH\Controllers\DetailReturPembelian.php(65): App\Models\DetailReturPembelianModel->saveDetailReturPembelian()
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailReturPembelian->save()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailReturPembelian))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 20:47:12 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\DetailReturPembelian.php(59): CodeIgniter\Model->__call('cancelDetailReturPembelian', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailReturPembelian->cancel('4')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailReturPembelian))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 20:55:20 --> Undefined variable $dataPembelian
+in APPPATH\Views\utang-pembelian\show.php on line 43.
+ 1 APPPATH\Views\utang-pembelian\show.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataPembelian', 'APPPATH\\Views\\utang-pembelian\\show.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\utang-pembelian\\show.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('utang-pembelian/show', [], true)
+ 5 APPPATH\Controllers\UtangPembelian.php(31): view('utang-pembelian/show', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UtangPembelian->show('2')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UtangPembelian))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 21:07:07 --> You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 845.
+ 1 SYSTEMPATH\Model.php(587): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(764): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\ReturPembelian.php(17): CodeIgniter\Model->__call('indexReturPembelian', [])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ReturPembelian->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturPembelian))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-19 21:11:48 --> mysqli_sql_exception: Unknown column 'detail_retur_pembelian.no_transaksi_pembelian' in 'where clause' in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Models\ReturPembelianModel.php(141): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\ReturPembelian.php(109): App\Models\ReturPembelianModel->showReturPembelian('TRS1912220001')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\ReturPembelian->show('TRS1912220001')
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturPembelian))
+#8 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-19 21:11:48 --> Unknown column 'detail_retur_pembelian.no_transaksi_pembelian' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `detail_retur_pembelian`
+JOIN `persediaan_bahan` ON `persediaan_bahan`.`id_bahan` = `detail_retur_pembelian`.`id_bahan`
+WHERE `detail_retur_pembelian`.`no_transaksi_pembelian` = \'TRS1912220001\'
+AND `detail_retur_pembelian`.`status_aktif` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `detail_retur_pembelian`
+JOIN `persediaan_bahan` ON `persediaan_bahan`.`id_bahan` = `detail_retur_pembelian`.`id_bahan`
+WHERE `detail_retur_pembelian`.`no_transaksi_pembelian` = \'TRS1912220001\'
+AND `detail_retur_pembelian`.`status_aktif` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `detail_retur_pembelian`
+JOIN `persediaan_bahan` ON `persediaan_bahan`.`id_bahan` = `detail_retur_pembelian`.`id_bahan`
+WHERE `detail_retur_pembelian`.`no_transaksi_pembelian` = \'TRS1912220001\'
+AND `detail_retur_pembelian`.`status_aktif` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `detail_retur_pembelian`
+JOIN `persediaan_bahan` ON `persediaan_bahan`.`id_bahan` = `detail_retur_pembelian`.`id_bahan`
+WHERE `detail_retur_pembelian`.`no_transaksi_pembelian` = :detail_retur_pembelian.no_transaksi_pembelian:
+AND `detail_retur_pembelian`.`status_aktif` = :detail_retur_pembelian.status_aktif:', [...], false)
+ 5 APPPATH\Models\ReturPembelianModel.php(141): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\ReturPembelian.php(109): App\Models\ReturPembelianModel->showReturPembelian('TRS1912220001')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ReturPembelian->show('TRS1912220001')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReturPembelian))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 23:39:18 --> Too few arguments to function App\Controllers\JurnalUmum::show(), 0 passed in C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php on line 927 and exactly 2 expected
+in APPPATH\Controllers\JurnalUmum.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\JurnalUmum->show()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurnalUmum))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 23:40:11 --> Too few arguments to function App\Controllers\JurnalUmum::show(), 0 passed in C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php on line 927 and exactly 2 expected
+in APPPATH\Controllers\JurnalUmum.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\JurnalUmum->show()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurnalUmum))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 23:41:10 --> Too few arguments to function App\Controllers\JurnalUmum::show(), 0 passed in C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php on line 927 and at least 1 expected
+in APPPATH\Controllers\JurnalUmum.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\JurnalUmum->show()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurnalUmum))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 23:41:10 --> Too few arguments to function App\Controllers\JurnalUmum::show(), 0 passed in C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php on line 927 and at least 1 expected
+in APPPATH\Controllers\JurnalUmum.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\JurnalUmum->show()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurnalUmum))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 23:43:52 --> Too few arguments to function App\Controllers\JurnalUmum::show(), 0 passed in C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php on line 927 and at least 1 expected
+in APPPATH\Controllers\JurnalUmum.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\JurnalUmum->show()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurnalUmum))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 23:43:52 --> Too few arguments to function App\Controllers\JurnalUmum::show(), 0 passed in C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php on line 927 and at least 1 expected
+in APPPATH\Controllers\JurnalUmum.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\JurnalUmum->show()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurnalUmum))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 23:53:39 --> Too few arguments to function App\Controllers\JurnalUmum::show(), 0 passed in C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php on line 927 and exactly 2 expected
+in APPPATH\Controllers\JurnalUmum.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\JurnalUmum->show()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurnalUmum))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 23:53:39 --> Too few arguments to function App\Controllers\JurnalUmum::show(), 0 passed in C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php on line 927 and exactly 2 expected
+in APPPATH\Controllers\JurnalUmum.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\JurnalUmum->show()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurnalUmum))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 23:53:39 --> Too few arguments to function App\Controllers\JurnalUmum::show(), 0 passed in C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php on line 927 and exactly 2 expected
+in APPPATH\Controllers\JurnalUmum.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\JurnalUmum->show()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurnalUmum))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 23:53:40 --> Too few arguments to function App\Controllers\JurnalUmum::show(), 0 passed in C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php on line 927 and exactly 2 expected
+in APPPATH\Controllers\JurnalUmum.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\JurnalUmum->show()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurnalUmum))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 23:53:40 --> Too few arguments to function App\Controllers\JurnalUmum::show(), 0 passed in C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php on line 927 and exactly 2 expected
+in APPPATH\Controllers\JurnalUmum.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\JurnalUmum->show()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurnalUmum))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 23:53:40 --> Too few arguments to function App\Controllers\JurnalUmum::show(), 0 passed in C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php on line 927 and exactly 2 expected
+in APPPATH\Controllers\JurnalUmum.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\JurnalUmum->show()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurnalUmum))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-19 23:53:40 --> Too few arguments to function App\Controllers\JurnalUmum::show(), 0 passed in C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php on line 927 and exactly 2 expected
+in APPPATH\Controllers\JurnalUmum.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\JurnalUmum->show()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\JurnalUmum))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

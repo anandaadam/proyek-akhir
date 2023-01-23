@@ -1,0 +1,8 @@
+CRITICAL - 2023-01-08 23:04:13 --> Undefined property: App\Controllers\PembayaranUtangPembelian::$pembayaranUtangPembeliaModel
+in APPPATH\Controllers\PembayaranUtangPembelian.php on line 62.
+ 1 APPPATH\Controllers\PembayaranUtangPembelian.php(62): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\PembayaranUtangPembelian::$pembayaranUtangPembeliaModel', 'APPPATH\\Controllers\\PembayaranUtangPembelian.php', 62)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\PembayaranUtangPembelian->store('10')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PembayaranUtangPembelian))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
