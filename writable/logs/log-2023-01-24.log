@@ -10,3 +10,80 @@ in SYSTEMPATH\CodeIgniter.php on line 186.
 CRITICAL - 2023-01-24 07:16:26 --> Class "Locale" not found
 in SYSTEMPATH\CodeIgniter.php on line 186.
  1 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-01-24 07:32:32 --> Class "Locale" not found
+in SYSTEMPATH\CodeIgniter.php on line 186.
+ 1 ROOTPATH\spark(83): CodeIgniter\CodeIgniter->initialize()
+ERROR - 2023-01-24 14:33:51 --> mysqli_sql_exception: Unknown column 'detail_bill_of_mataerial.status_aktif' in 'where clause' in C:\xampp82\htdocs\proyek-akhir\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp82\htdocs\proyek-akhir\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp82\htdocs\proyek-akhir\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp82\htdocs\proyek-akhir\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp82\htdocs\proyek-akhir\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp82\htdocs\proyek-akhir\app\Models\BillOfMaterialModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp82\htdocs\proyek-akhir\app\Controllers\BillOfMaterial.php(98): App\Models\BillOfMaterialModel->editBillOfMaterial('5')
+#6 C:\xampp82\htdocs\proyek-akhir\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->delete('5')
+#7 C:\xampp82\htdocs\proyek-akhir\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#8 C:\xampp82\htdocs\proyek-akhir\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp82\htdocs\proyek-akhir\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp82\htdocs\proyek-akhir\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp82\\htdo...')
+#11 {main}
+CRITICAL - 2023-01-24 14:33:51 --> Unknown column 'detail_bill_of_mataerial.status_aktif' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `detail_bill_of_material`
+JOIN `persediaan_bahan` ON `persediaan_bahan`.`id_bahan` = `detail_bill_of_material`.`id_bahan`
+WHERE `detail_bill_of_material`.`id_bom` = \'5\'
+AND `detail_bill_of_mataerial`.`status_aktif` = 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `detail_bill_of_material`
+JOIN `persediaan_bahan` ON `persediaan_bahan`.`id_bahan` = `detail_bill_of_material`.`id_bahan`
+WHERE `detail_bill_of_material`.`id_bom` = \'5\'
+AND `detail_bill_of_mataerial`.`status_aktif` = 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `detail_bill_of_material`
+JOIN `persediaan_bahan` ON `persediaan_bahan`.`id_bahan` = `detail_bill_of_material`.`id_bahan`
+WHERE `detail_bill_of_material`.`id_bom` = \'5\'
+AND `detail_bill_of_mataerial`.`status_aktif` = 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `detail_bill_of_material`
+JOIN `persediaan_bahan` ON `persediaan_bahan`.`id_bahan` = `detail_bill_of_material`.`id_bahan`
+WHERE `detail_bill_of_material`.`id_bom` = :detail_bill_of_material.id_bom:
+AND `detail_bill_of_mataerial`.`status_aktif` = :detail_bill_of_mataerial.status_aktif:', [...], false)
+ 5 APPPATH\Models\BillOfMaterialModel.php(73): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\BillOfMaterial.php(98): App\Models\BillOfMaterialModel->editBillOfMaterial('5')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->delete('5')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-24 14:34:07 --> mysqli_sql_exception: Table 'polubi_snack_ci.detail_bill_of_mataerial' doesn't exist in C:\xampp82\htdocs\proyek-akhir\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp82\htdocs\proyek-akhir\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_...', 0)
+#1 C:\xampp82\htdocs\proyek-akhir\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_...')
+#2 C:\xampp82\htdocs\proyek-akhir\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_...')
+#3 C:\xampp82\htdocs\proyek-akhir\system\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_...', Array, false)
+#4 C:\xampp82\htdocs\proyek-akhir\app\Models\BillOfMaterialModel.php(118): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp82\htdocs\proyek-akhir\app\Controllers\BillOfMaterial.php(118): App\Models\BillOfMaterialModel->removeAllBillOfMaterial('5')
+#6 C:\xampp82\htdocs\proyek-akhir\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->removeAll('5')
+#7 C:\xampp82\htdocs\proyek-akhir\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#8 C:\xampp82\htdocs\proyek-akhir\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp82\htdocs\proyek-akhir\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp82\htdocs\proyek-akhir\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp82\\htdo...')
+#11 {main}
+CRITICAL - 2023-01-24 14:34:07 --> Table 'polubi_snack_ci.detail_bill_of_mataerial' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `detail_bill_of_mataerial` SET `status_aktif` = 0
+WHERE `id_bom` = \'5\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `detail_bill_of_mataerial` SET `status_aktif` = 0
+WHERE `id_bom` = \'5\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `detail_bill_of_mataerial` SET `status_aktif` = 0
+WHERE `id_bom` = \'5\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2079): CodeIgniter\Database\BaseConnection->query('UPDATE `detail_bill_of_mataerial` SET `status_aktif` = :status_aktif:
+WHERE `id_bom` = :id_bom:', [...], false)
+ 5 APPPATH\Models\BillOfMaterialModel.php(118): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\BillOfMaterial.php(118): App\Models\BillOfMaterialModel->removeAllBillOfMaterial('5')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->removeAll('5')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

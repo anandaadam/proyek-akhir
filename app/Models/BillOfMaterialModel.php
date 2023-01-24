@@ -69,6 +69,7 @@ class BillOfMaterialModel extends Model
             ->select('*')
             ->join('persediaan_bahan', 'persediaan_bahan.id_bahan = detail_bill_of_material.id_bahan')
             ->where('detail_bill_of_material.id_bom', $idBom)
+            ->where('detail_bill_of_material.status_aktif', 1)
             ->get();
 
         return $query;
@@ -93,6 +94,32 @@ class BillOfMaterialModel extends Model
 
     public function removeBillOfMaterial()
     {
+        $jumlahInputDelete = $this->request->getVar('jumlah_bom');
+        for ($i = 1; $i <= $jumlahInputDelete; $i++) {
+            $idDetailBom = $this->request->getVar("id_detail_bom{$i}");
+            $data = [
+                'status_aktif' => 0
+            ];
+
+            $this->db->table('detail_bill_of_material')
+                ->where('id_detail_bom', $idDetailBom)
+                ->update($data);
+        }
+    }
+
+    public function removeAllBillOfMaterial($idBom)
+    {
+        $data = [
+            'status_aktif' => 0
+        ];
+
+        $this->db->table('detail_bill_of_material')
+            ->where('id_bom', $idBom)
+            ->update($data);
+
+        $this->db->table('bill_of_material')
+            ->where('id_bom', $idBom)
+            ->update($data);
     }
 
     public function getDataProduk()

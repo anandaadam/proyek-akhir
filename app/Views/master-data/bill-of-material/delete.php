@@ -42,7 +42,7 @@
                         </table>
 
                         <div class="d-none container-input-bom">
-                            <form action="<?= base_url('BillOfMaterial/remove/' . $data->id_detail_bom) ?>" name="form<?= $data->id_detail_bom ?>" class="form<?= $data->id_detail_bom ?> form-hapus-item-bom" method="POST">
+                            <form action="<?= base_url('BillOfMaterial/remove/') ?>" class="form-hapus-item-bom" method="POST">
                                 <input type="hidden" name="jumlah_bom" class="jumlah-bom" value="0">
                             </form>
                         </div>
@@ -53,7 +53,7 @@
                             <form action="<?= base_url('BillOfMaterial/removeAll/' . $idBom) ?>" name="form<?= $idBom ?>" class="form<?= $idBom ?> d-none" method="POST">
                             </form>
 
-                            <button class="btn btn-primary btn-remove-data" data-remove=<?= $idBom ?> data-confirm="Hapus?|Anda yakin untuk menghapus <b><?= $idBom ?></b> dari BOM?">Submit
+                            <button class="btn btn-primary btn-remove-item-bom" data-remove=<?= $idBom ?> data-confirm="Hapus?|Anda yakin untuk menghapus <b><?= $idBom ?></b> dari BOM?">Submit
                             </button>
                             <div class="d-none btn-tambah-bahan-bom btn-submit-bom"></div>
                         </div>

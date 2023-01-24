@@ -411,3 +411,16 @@ checkboxItemBom.forEach((button) => {
     }
   });
 });
+
+const btnRemoveItemBom = document.querySelector(".btn-remove-item-bom");
+
+btnRemoveItemBom.addEventListener("click", () => {
+  const removes = document.querySelectorAll(".btn-for-remove");
+
+  removes.forEach((remove) => {
+    remove.addEventListener("click", () => {
+      const formHapusItemBom = document.querySelector(".form-hapus-item-bom");
+      formHapusItemBom.submit();
+    });
+  });
+});

@@ -107,11 +107,15 @@ class BillOfMaterial extends BaseController
         echo view('layouts/footer');
     }
 
-    public function remove($idDetailBom)
+    public function remove()
     {
+        $this->billOfMaterialModel->removeBillOfMaterial();
+        return redirect()->to('BillOfMaterial/index');
     }
 
     public function removeAll($idBom)
     {
+        $this->billOfMaterialModel->removeAllBillOfMaterial($idBom);
+        return redirect()->to('BillOfMaterial/index');
     }
 }
