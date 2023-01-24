@@ -43,16 +43,14 @@
                                                 <td><?= $no; ?></td>
                                                 <td><?= $data->nama_produk ?></td>
                                                 <td>
-                                                    <a href="<?= base_url('BillOfMaterial/add/' . $data->id_bom) ?>" class="btn btn-success"><i class="fas fa-plus"></i>
+                                                    <a href="<?= base_url('BillOfMaterial/create/' . $data->id_bom) ?>" class="btn btn-success"><i class="fas fa-plus"></i>
                                                     </a>
                                                     <a href="<?= base_url('BillOfMaterial/show/' . $data->id_bom) ?>" class="btn btn-info"><i class="fas fa-eye"></i>
                                                     </a>
                                                     <a href="<?= base_url('BillOfMaterial/edit/' . $data->id_bom) ?>" class="btn btn-warning"><i class="fas fa-edit"></i>
                                                     </a>
-                                                    <button class="btn btn-danger btn-remove-data" data-remove=<?= $data->id_bom ?> data-confirm="Hapus?|Anda yakin untuk menghapus <b><?= $data->nama_produk ?></b> dari daftar persediaan Bill Of Material?"><i class="fa fa-trash fa-xl"></i>
-                                                    </button>
-                                                    <form action="<?= base_url('BillOfMaterial/remove/' . $data->id_bom) ?>" name="form<?= $data->id_bom ?>" class="form<?= $data->id_bom ?>" method="POST">
-                                                    </form>
+                                                    <a href="<?= base_url('BillOfMaterial/delete/' . $data->id_bom) ?>" class="btn btn-danger"><i class="fas fa-trash fa-xl"></i>
+                                                    </a>
                                                 </td>
                                             </tr>
                                             <?php $no++; ?>

@@ -76,3 +76,530 @@ in SYSTEMPATH\Database\BaseConnection.php on line 845.
  6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-23 12:36:22 --> mysqli_sql_exception: Column 'id_bahan' cannot be null in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `de...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `de...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `de...')
+#3 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `de...', Array, false)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(49): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(51): App\Models\BillOfMaterialModel->storeBillOfMaterial()
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->store()
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#8 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-23 12:36:22 --> Column 'id_bahan' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `detail_bill_of_material` (`id_bom`, `id_bahan`, `kuantitas`, `status_aktif`) VALUES (3, NULL, NULL, 1)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `detail_bill_of_material` (`id_bom`, `id_bahan`, `kuantitas`, `status_aktif`) VALUES (3, NULL, NULL, 1)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `detail_bill_of_material` (`id_bom`, `id_bahan`, `kuantitas`, `status_aktif`) VALUES (3, NULL, NULL, 1)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `detail_bill_of_material` (`id_bom`, `id_bahan`, `kuantitas`, `status_aktif`) VALUES (:id_bom:, :id_bahan:, :kuantitas:, :status_aktif:)', [...], false)
+ 5 APPPATH\Models\BillOfMaterialModel.php(49): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\BillOfMaterial.php(51): App\Models\BillOfMaterialModel->storeBillOfMaterial()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->store()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 13:15:34 --> Undefined variable $data
+in APPPATH\Views\master-data\bill-of-material\add.php on line 7.
+ 1 APPPATH\Views\master-data\bill-of-material\add.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\master-data\\bill-of-material\\add.php', 7)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\bill-of-material\\add.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/bill-of-material/add', [], true)
+ 5 APPPATH\Controllers\BillOfMaterial.php(48): view('master-data/bill-of-material/add', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->create('9')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-23 13:31:43 --> mysqli_sql_exception: Unknown column 'bill_of_mataerial.id_produk' in 'on clause' in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(91): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(36): App\Models\BillOfMaterialModel->getNameProduk('9')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->create('9')
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#8 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-23 13:31:43 --> Unknown column 'bill_of_mataerial.id_produk' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `bill_of_material`
+JOIN `produk` ON `produk`.`id_produk` = `bill_of_mataerial`.`id_produk`
+WHERE `bill_of_material`.`id_bom` = \'9\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `bill_of_material`
+JOIN `produk` ON `produk`.`id_produk` = `bill_of_mataerial`.`id_produk`
+WHERE `bill_of_material`.`id_bom` = \'9\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `bill_of_material`
+JOIN `produk` ON `produk`.`id_produk` = `bill_of_mataerial`.`id_produk`
+WHERE `bill_of_material`.`id_bom` = \'9\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `bill_of_material`
+JOIN `produk` ON `produk`.`id_produk` = `bill_of_mataerial`.`id_produk`
+WHERE `bill_of_material`.`id_bom` = :bill_of_material.id_bom:', [...], false)
+ 5 APPPATH\Models\BillOfMaterialModel.php(91): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\BillOfMaterial.php(36): App\Models\BillOfMaterialModel->getNameProduk('9')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->create('9')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 13:31:58 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+in APPPATH\Views\master-data\bill-of-material\add.php on line 17.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/bill-of-material/add', [], true)
+ 4 APPPATH\Controllers\BillOfMaterial.php(50): view('master-data/bill-of-material/add', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->create('9')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 13:32:13 --> Array to string conversion
+in APPPATH\Views\master-data\bill-of-material\add.php on line 17.
+ 1 APPPATH\Views\master-data\bill-of-material\add.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\master-data\\bill-of-material\\add.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\bill-of-material\\add.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/bill-of-material/add', [], true)
+ 5 APPPATH\Controllers\BillOfMaterial.php(50): view('master-data/bill-of-material/add', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->create('9')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-23 14:55:31 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'polubi_snack_ci', 3306, '', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(76): App\Models\BillOfMaterialModel->getNameProduk('9')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->edit('9')
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#8 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(76): App\Models\BillOfMaterialModel->getNameProduk('9')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->edit('9')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-23 14:55:31 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `bill_of_material`
+JOIN `produk` ON `produk`.`id_produk` = `bill_of_material`.`id_produk`
+WHERE `bill_of_material`.`id_bom` = :bill_of_material.id_bom:', [...], false)
+ 3 APPPATH\Models\BillOfMaterialModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\BillOfMaterial.php(76): App\Models\BillOfMaterialModel->getNameProduk('9')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->edit('9')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-23 14:55:42 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'polubi_snack_ci', 3306, '', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(76): App\Models\BillOfMaterialModel->getNameProduk('9')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->edit('9')
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#8 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(76): App\Models\BillOfMaterialModel->getNameProduk('9')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->edit('9')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-23 14:55:42 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `bill_of_material`
+JOIN `produk` ON `produk`.`id_produk` = `bill_of_material`.`id_produk`
+WHERE `bill_of_material`.`id_bom` = :bill_of_material.id_bom:', [...], false)
+ 3 APPPATH\Models\BillOfMaterialModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\BillOfMaterial.php(76): App\Models\BillOfMaterialModel->getNameProduk('9')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->edit('9')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-23 14:56:04 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'polubi_snack_ci', 3306, '', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(76): App\Models\BillOfMaterialModel->getNameProduk('9')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->edit('9')
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#8 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(76): App\Models\BillOfMaterialModel->getNameProduk('9')
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->edit('9')
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-23 14:56:04 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `bill_of_material`
+JOIN `produk` ON `produk`.`id_produk` = `bill_of_material`.`id_produk`
+WHERE `bill_of_material`.`id_bom` = :bill_of_material.id_bom:', [...], false)
+ 3 APPPATH\Models\BillOfMaterialModel.php(100): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\BillOfMaterial.php(76): App\Models\BillOfMaterialModel->getNameProduk('9')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->edit('9')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-23 14:56:16 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'polubi_snack_ci', 3306, '', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(24): App\Models\BillOfMaterialModel->indexBillOfMaterial()
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->index()
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#8 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(24): App\Models\BillOfMaterialModel->indexBillOfMaterial()
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->index()
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-23 14:56:16 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `bill_of_material`
+JOIN `produk` ON `produk`.`id_produk` = `bill_of_material`.`id_produk`
+WHERE `bill_of_material`.`status_aktif` = :bill_of_material.status_aktif:
+AND `bill_of_material`.`id_perusahaan` = :bill_of_material.id_perusahaan:', [...], false)
+ 3 APPPATH\Models\BillOfMaterialModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\BillOfMaterial.php(24): App\Models\BillOfMaterialModel->indexBillOfMaterial()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-23 14:56:27 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=1804 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 171)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'polubi_snack_ci', 3306, '', 0)
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(24): App\Models\BillOfMaterialModel->indexBillOfMaterial()
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->index()
+#8 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#9 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'polubi_snack_ci', 3306, '', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(24): App\Models\BillOfMaterialModel->indexBillOfMaterial()
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->index()
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#8 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(24): App\Models\BillOfMaterialModel->indexBillOfMaterial()
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->index()
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-23 14:56:27 --> Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `bill_of_material`
+JOIN `produk` ON `produk`.`id_produk` = `bill_of_material`.`id_produk`
+WHERE `bill_of_material`.`status_aktif` = :bill_of_material.status_aktif:
+AND `bill_of_material`.`id_perusahaan` = :bill_of_material.id_perusahaan:', [...], false)
+ 3 APPPATH\Models\BillOfMaterialModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\BillOfMaterial.php(24): App\Models\BillOfMaterialModel->indexBillOfMaterial()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-23 14:57:22 --> Error connecting to the database: ErrorException: mysqli::real_connect(): Error while reading greeting packet. PID=1804 in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 171)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'polubi_snack_ci', 3306, '', 0)
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(24): App\Models\BillOfMaterialModel->indexBillOfMaterial()
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->index()
+#8 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#9 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+
+Next mysqli_sql_exception: MySQL server has gone away in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'polubi_snack_ci', 3306, '', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(24): App\Models\BillOfMaterialModel->indexBillOfMaterial()
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->index()
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#8 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: MySQL server has gone away in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(24): App\Models\BillOfMaterialModel->indexBillOfMaterial()
+#5 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->index()
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-23 14:57:22 --> Unable to connect to the database.
+Main connection [MySQLi]: MySQL server has gone away
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `bill_of_material`
+JOIN `produk` ON `produk`.`id_produk` = `bill_of_material`.`id_produk`
+WHERE `bill_of_material`.`status_aktif` = :bill_of_material.status_aktif:
+AND `bill_of_material`.`id_perusahaan` = :bill_of_material.id_perusahaan:', [...], false)
+ 3 APPPATH\Models\BillOfMaterialModel.php(24): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\BillOfMaterial.php(24): App\Models\BillOfMaterialModel->indexBillOfMaterial()
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 16:13:32 --> Undefined variable $dataBahan
+in APPPATH\Views\master-data\bill-of-material\edit.php on line 36.
+ 1 APPPATH\Views\master-data\bill-of-material\edit.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataBahan', 'APPPATH\\Views\\master-data\\bill-of-material\\edit.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\bill-of-material\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/bill-of-material/edit', [], true)
+ 5 APPPATH\Controllers\BillOfMaterial.php(83): view('master-data/bill-of-material/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-23 16:13:32 --> mysqli_sql_exception: Column 'id_produk' cannot be null in C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\polubi-snack-ci\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bi...', 0)
+#1 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bi...')
+#2 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bi...')
+#3 C:\xampp\htdocs\polubi-snack-ci\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bi...', Array, false)
+#4 C:\xampp\htdocs\polubi-snack-ci\app\Models\BillOfMaterialModel.php(38): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\polubi-snack-ci\app\Controllers\BillOfMaterial.php(57): App\Models\BillOfMaterialModel->storeBillOfMaterial()
+#6 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(927): App\Controllers\BillOfMaterial->store()
+#7 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+#8 C:\xampp\htdocs\polubi-snack-ci\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\polubi-snack-ci\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\polubi-snack-ci\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-01-23 16:13:32 --> Column 'id_produk' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `bill_of_material` (`id_perusahaan`, `id_produk`, `status_aktif`) VALUES (\'1\', NULL, 1)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bill_of_material` (`id_perusahaan`, `id_produk`, `status_aktif`) VALUES (\'1\', NULL, 1)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bill_of_material` (`id_perusahaan`, `id_produk`, `status_aktif`) VALUES (\'1\', NULL, 1)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bill_of_material` (`id_perusahaan`, `id_produk`, `status_aktif`) VALUES (:id_perusahaan:, :id_produk:, :status_aktif:)', [...], false)
+ 5 APPPATH\Models\BillOfMaterialModel.php(38): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\BillOfMaterial.php(57): App\Models\BillOfMaterialModel->storeBillOfMaterial()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->store()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 16:13:38 --> Undefined variable $dataBahan
+in APPPATH\Views\master-data\bill-of-material\edit.php on line 36.
+ 1 APPPATH\Views\master-data\bill-of-material\edit.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataBahan', 'APPPATH\\Views\\master-data\\bill-of-material\\edit.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\bill-of-material\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/bill-of-material/edit', [], true)
+ 5 APPPATH\Controllers\BillOfMaterial.php(83): view('master-data/bill-of-material/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 16:13:39 --> Undefined variable $dataBahan
+in APPPATH\Views\master-data\bill-of-material\edit.php on line 36.
+ 1 APPPATH\Views\master-data\bill-of-material\edit.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataBahan', 'APPPATH\\Views\\master-data\\bill-of-material\\edit.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\bill-of-material\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/bill-of-material/edit', [], true)
+ 5 APPPATH\Controllers\BillOfMaterial.php(83): view('master-data/bill-of-material/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 16:13:41 --> Undefined variable $dataBahan
+in APPPATH\Views\master-data\bill-of-material\edit.php on line 36.
+ 1 APPPATH\Views\master-data\bill-of-material\edit.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataBahan', 'APPPATH\\Views\\master-data\\bill-of-material\\edit.php', 36)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\bill-of-material\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/bill-of-material/edit', [], true)
+ 5 APPPATH\Controllers\BillOfMaterial.php(83): view('master-data/bill-of-material/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 16:16:29 --> Unmatched '}'
+in APPPATH\Views\master-data\bill-of-material\edit.php on line 44.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/bill-of-material/edit', [], true)
+ 3 APPPATH\Controllers\BillOfMaterial.php(83): view('master-data/bill-of-material/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->edit('2')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 16:40:00 --> Undefined property: stdClass::$jumlah_bahan
+in APPPATH\Views\master-data\bill-of-material\edit.php on line 17.
+ 1 APPPATH\Views\master-data\bill-of-material\edit.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$jumlah_bahan', 'APPPATH\\Views\\master-data\\bill-of-material\\edit.php', 17)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\bill-of-material\\edit.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/bill-of-material/edit', [], true)
+ 5 APPPATH\Controllers\BillOfMaterial.php(84): view('master-data/bill-of-material/edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 18:12:18 --> Undefined property: mysqli::$id_detail_bom
+in APPPATH\Views\master-data\bill-of-material\delete.php on line 37.
+ 1 APPPATH\Views\master-data\bill-of-material\delete.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: mysqli::$id_detail_bom', 'APPPATH\\Views\\master-data\\bill-of-material\\delete.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\bill-of-material\\delete.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/bill-of-material/delete', [], true)
+ 5 APPPATH\Controllers\BillOfMaterial.php(106): view('master-data/bill-of-material/delete', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->delete('2')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 18:14:30 --> Undefined variable $id_bom
+in APPPATH\Views\master-data\bill-of-material\delete.php on line 55.
+ 1 APPPATH\Views\master-data\bill-of-material\delete.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_bom', 'APPPATH\\Views\\master-data\\bill-of-material\\delete.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\bill-of-material\\delete.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/bill-of-material/delete', [], true)
+ 5 APPPATH\Controllers\BillOfMaterial.php(106): view('master-data/bill-of-material/delete', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->delete('2')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 18:23:51 --> Undefined variable $data
+in APPPATH\Views\master-data\bill-of-material\delete.php on line 15.
+ 1 APPPATH\Views\master-data\bill-of-material\delete.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\master-data\\bill-of-material\\delete.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\master-data\\bill-of-material\\delete.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('master-data/bill-of-material/delete', [], true)
+ 5 APPPATH\Controllers\BillOfMaterial.php(106): view('master-data/bill-of-material/delete', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\BillOfMaterial->delete('2')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BillOfMaterial))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

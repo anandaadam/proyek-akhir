@@ -264,8 +264,8 @@ btnTambahBahanBom.addEventListener("click", () => {
                 </tr>
   `;
   const htmlInput = `
-                <input type="hidden" name="bahan-bom-${currentNumber}" class="bahan-bom-${currentNumber}" value="${namaBahan}">
-                <input type="hidden" name="kuantitas-bom-${currentNumber}" class="kuantitas-bom-${currentNumber}" value="${jumlahBahan}">
+                <input type="hidden" name="bahan_bom_${currentNumber}" class="bahan-bom-${currentNumber}" value="${idBahan}">
+                <input type="hidden" name="kuantitas_bom_${currentNumber}" class="kuantitas-bom-${currentNumber}" value="${jumlahBahan}">
   `;
 
   tabelBom.insertAdjacentHTML("beforeend", html);
@@ -327,11 +327,11 @@ tabelBom.addEventListener("click", (event) => {
 
       sisaInputBahanBom.setAttribute(
         "name",
-        `bahan-bom-${lastOrderNumber - 1}`
+        `bahan_bom_${lastOrderNumber - 1}`
       );
       sisaInputQtyBahanBom.setAttribute(
         "name",
-        `kuantitas-bom-${lastOrderNumber - 1}`
+        `kuantitas_bom_${lastOrderNumber - 1}`
       );
 
       sisaInputBahanBom.classList.replace(
@@ -344,4 +344,70 @@ tabelBom.addEventListener("click", (event) => {
       );
     }
   }
+});
+
+document.querySelector(".btn-submit-bom").addEventListener("click", (event) => {
+  const jumlahBom = +document.querySelector(".jumlah-bom").value;
+
+  if (jumlahBom === 0) {
+    event.preventDefault();
+    return swal(
+      "Data BOM Tidak Lengkap",
+      "Silahkan lengkapai data BOM",
+      "warning"
+    );
+  }
+});
+
+// -------------------- Hapus Bill Of Material (checkbox) --------------------
+const checkboxItemBom = document.querySelectorAll(".checkbox-item-bom");
+let jumlahHapusItem = 1;
+
+checkboxItemBom.forEach((button) => {
+  button.addEventListener("click", () => {
+    button.classList.toggle("done-check");
+    if (button.classList.contains("done-check")) {
+      const formHapusItemBom = document.querySelector(".form-hapus-item-bom");
+      const jumlahBom = document.querySelector(".jumlah-bom");
+      const idDetailBom = button.dataset.checkbox;
+      const html = `
+                    <input type="hidden" name="id_detail_bom${jumlahHapusItem}" data-urutan=${jumlahHapusItem} value="${idDetailBom}" class="id_detail_bom${idDetailBom}">
+      `;
+
+      formHapusItemBom.insertAdjacentHTML("beforeend", html);
+      jumlahBom.value = jumlahHapusItem;
+      jumlahHapusItem++;
+    }
+
+    if (!button.classList.contains("done-check")) {
+      const formHapusItemBom = document.querySelector(".form-hapus-item-bom");
+      const jumlahBom = document.querySelector(".jumlah-bom");
+      const idDetailBom = button.dataset.checkbox;
+      const inputHapusBom = document.querySelector(
+        `.id_detail_bom${idDetailBom}`
+      );
+      const currentRow = +inputHapusBom.dataset.urutan;
+
+      inputHapusBom.remove();
+      jumlahBom.value = jumlahHapusItem - 2;
+      jumlahHapusItem--;
+
+      if (currentRow < jumlahHapusItem) {
+        const sisaBarisDiatas = jumlahHapusItem - currentRow;
+        for (let i = 1; i <= sisaBarisDiatas; i++) {
+          const lastOrderNumber = currentRow + i;
+          const sisaElementDiatas = document.querySelector(
+            `[data-urutan="${lastOrderNumber}"]`
+          );
+
+          sisaElementDiatas.setAttribute(
+            "name",
+            `id_detail_bom${lastOrderNumber - 1}`
+          );
+
+          sisaElementDiatas.dataset.urutan = lastOrderNumber - 1;
+        }
+      }
+    }
+  });
 });

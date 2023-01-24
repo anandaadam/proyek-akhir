@@ -7,22 +7,14 @@
         <div class="section-body">
             <div class="col-12 col-md-6 col-lg-12">
                 <div class="card">
-                    <form action="<?= base_url('BillOfMaterial/store') ?>" method="POST">
+                    <form action="<?= base_url('BillOfMaterial/store/' . $idBom) ?>" method="POST">
                         <div class="card-header">
                             <h4>Silahkan isi form</h4>
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label>Pilih Produk</label>
-                                <select id="produk" name="produk" class="form-control select2">
-                                    <?php foreach ($dataProduk->getResult() as $data) { ?>
-                                        <?php if (old('bahan') == $data->id_produk) { ?>
-                                            <option value="<?= $data->id_produk ?>" selected><?= $data->nama_produk ?></option>
-                                        <?php } else { ?>
-                                            <option value="<?= $data->id_produk ?>"><?= $data->nama_produk ?></option>
-                                        <?php } ?>
-                                    <?php } ?>
-                                </select>
+                                <label>Nama Produk</label>
+                                <input type="text" id="nama_produk" class="form-control" name="nama_produk" value="<?= $namaProduk ?>" disabled>
                             </div>
 
                             <div class="row">

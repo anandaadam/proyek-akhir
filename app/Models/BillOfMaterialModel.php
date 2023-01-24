@@ -26,8 +26,30 @@ class BillOfMaterialModel extends Model
         return $query;
     }
 
-    public function storeBillOfMaterial()
+    public function storeBillOfMaterial($idBom = false)
     {
+        if (!$idBom) {
+            $dataBom = [
+                'id_perusahaan' => session()->get('idPerusahaan'),
+                'id_produk' => $this->request->getVar('produk'),
+                'status_aktif' => 1
+            ];
+
+            $this->db->table('bill_of_material')->insert($dataBom);
+            $lastIdBom = $this->db->insertID();
+        }
+
+        $jumlahInput = (int)$this->request->getVar('jumlah_bom');
+        for ($i = 1; $i <= $jumlahInput; $i++) {
+            $dataDetailBom = [
+                'id_bom' => $idBom ? $idBom : $lastIdBom,
+                'id_bahan'  => $this->request->getVar("bahan_bom_{$i}"),
+                'kuantitas'  => $this->request->getVar("kuantitas_bom_{$i}"),
+                'status_aktif' => 1,
+            ];
+
+            $this->db->table('detail_bill_of_material')->insert($dataDetailBom);
+        }
     }
 
     public function showBillOfMaterial($idBom)
@@ -41,12 +63,32 @@ class BillOfMaterialModel extends Model
         return $query;
     }
 
-    public function editBillOfMaterial()
+    public function editBillOfMaterial($idBom)
     {
+        $query = $this->db->table('detail_bill_of_material')
+            ->select('*')
+            ->join('persediaan_bahan', 'persediaan_bahan.id_bahan = detail_bill_of_material.id_bahan')
+            ->where('detail_bill_of_material.id_bom', $idBom)
+            ->get();
+
+        return $query;
     }
 
     public function updateBillOfMaterial()
     {
+        $jumlahInputUpdate = $this->request->getVar('jumlah_bom_update');
+        for ($i = 1; $i <= $jumlahInputUpdate; $i++) {
+            $dataDetailBomUpdate = [
+                'id_bom' => $this->request->getVar('id_bom_update'),
+                'id_bahan'  => $this->request->getVar("bahan_bom_update{$i}"),
+                'kuantitas'  => $this->request->getVar("kuantitas_bom_update{$i}"),
+                'status_aktif' => 1,
+            ];
+
+            $this->db->table('detail_bill_of_material')
+                ->where('id_detail_bom', $this->request->getVar("id_detail_bom{$i}"))
+                ->update($dataDetailBomUpdate);
+        }
     }
 
     public function removeBillOfMaterial()
@@ -60,5 +102,19 @@ class BillOfMaterialModel extends Model
             ->get();
 
         return $query;
+    }
+
+    public function getNameProduk($idBom)
+    {
+        $query = $this->db->table('bill_of_material')
+            ->select('*')
+            ->join('produk', 'produk.id_produk = bill_of_material.id_produk')
+            ->where('bill_of_material.id_bom', $idBom)
+            ->get();
+
+        foreach ($query->getResult() as $data) {
+            $namaProduk = $data->nama_produk;
+        }
+        return $namaProduk;
     }
 }
