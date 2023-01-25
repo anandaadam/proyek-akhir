@@ -2,7 +2,7 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Pembelian</h1>
+            <h1>Data Detail Transaksi Retur Pembelian</h1>
         </div>
 
         <div class="section-body">
@@ -56,5 +56,6 @@
                 </div>
             </div>
         </div>
+
     </section>
 </div>

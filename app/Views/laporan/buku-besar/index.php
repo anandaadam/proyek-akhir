@@ -2,7 +2,7 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Jurnal Umum</h1>
+            <h1>Buku Besar</h1>
         </div>
 
         <div class="section-body">
@@ -74,12 +74,12 @@
                                 </tr>
                             </thead>
                             <tbody class="tabel-buku-besar">
-
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
 </div>

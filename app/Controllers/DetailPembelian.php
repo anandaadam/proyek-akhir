@@ -26,7 +26,7 @@ class DetailPembelian extends BaseController
             'dataBahan' => $dataBahan
         ];
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Tambah Data Item Transaksi Pembelian']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('transaksi/detail-pembelian/create', $data);

@@ -18,7 +18,7 @@ class BukuBesar extends BaseController
             'dataTahun' => $dataTahun
         ];
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Buku Besar']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('laporan/buku-besar/index', $data);

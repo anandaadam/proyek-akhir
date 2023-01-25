@@ -2,16 +2,13 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Pembayaran Utang Pembelian</h1>
+            <h1>Data Pembayaran Utang Pembelian</h1>
         </div>
 
         <div class="section-body">
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <!-- <div class="card-header">
-                            <a href="<?= base_url('Supplier/create') ?>" class="btn btn-icon icon-left btn-success rounded float-right"><i class="fa fa-plus fa-xl"></i>&nbsp Tambah</a>
-                        </div> -->
                         <div class="card-body">
                             <?php
                             if (session()->has("success")) {
@@ -58,5 +55,6 @@
                 </div>
             </div>
         </div>
+
     </section>
 </div>

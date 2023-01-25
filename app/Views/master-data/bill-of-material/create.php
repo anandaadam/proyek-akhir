@@ -2,8 +2,9 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Bill Of Material</h1>
+            <h1>Tambah Data Baru Bill Of Material</h1>
         </div>
+
         <div class="section-body">
             <div class="col-12 col-md-6 col-lg-12">
                 <div class="card">
@@ -72,6 +73,5 @@
             </div>
         </div>
 
-</div>
-</section>
+    </section>
 </div>

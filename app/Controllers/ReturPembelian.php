@@ -19,7 +19,7 @@ class ReturPembelian extends BaseController
     {
         $dataReturPembelian = $this->returPembelianModel->indexReturPembelian();
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Data Transaksi Retur Pembelian']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('transaksi/retur-pembelian/index', ['dataReturPembelian' => $dataReturPembelian]);
@@ -36,7 +36,7 @@ class ReturPembelian extends BaseController
         ];
 
         if (!$noPembelian) {
-            echo view('layouts/header');
+            echo view('layouts/header', ['tittle' => 'Tambah Data Transaksi Retur Pembelian']);
             echo view('layouts/body');
             echo view('layouts/sidebar');
             echo view('transaksi/retur-pembelian/create', $data);
@@ -51,7 +51,7 @@ class ReturPembelian extends BaseController
                 'isNew' => $this->isNew
             ];
 
-            echo view('layouts/header');
+            echo view('layouts/header', ['tittle' => 'Tambah Data Transaksi Retur Pembelian']);
             echo view('layouts/body');
             echo view('layouts/sidebar');
             echo view('transaksi/retur-pembelian/create', $data);
@@ -104,7 +104,7 @@ class ReturPembelian extends BaseController
     {
         $dataReturPembelian = $this->returPembelianModel->showReturPembelian($noReturPembelian);
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Data Detail Transaksi Retur Pembelian']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('transaksi/retur-pembelian/show', ['dataReturPembelian' => $dataReturPembelian]);

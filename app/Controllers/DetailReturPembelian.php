@@ -31,7 +31,7 @@ class DetailReturPembelian extends BaseController
             'dataListBahan' => $dataListBahan
         ];
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Tambah Data Item Transaksi Retur Pembelian']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('transaksi/detail-retur-pembelian/create', $data);

@@ -11,7 +11,7 @@ class JurnalUmum extends BaseController
         $jurnalUmumModel = new JurnalUmumModel();
         $dataTahun = $jurnalUmumModel->getPeriodeTahun();
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Jurnal Umum']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('laporan/jurnal-umum/index', ['dataTahun' => $dataTahun]);

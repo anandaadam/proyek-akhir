@@ -2,7 +2,7 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Transaksi Retur Pembelian</h1>
+            <h1>Tambah Item Transaksi Retur Pembelian</h1>
         </div>
 
         <div class="section-body">
@@ -47,6 +47,6 @@
                 </div>
             </div>
         </div>
-</div>
-</section>
+
+    </section>
 </div>

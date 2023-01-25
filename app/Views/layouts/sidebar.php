@@ -21,10 +21,11 @@
             <li class="">
                 <a class="nav-link" href="<?= base_url('BillOfMaterial/index') ?>"><i class="fas fa-layer-group"></i><span>Bill of Material</span></a>
             </li>
-            <li class="menu-header">Transaksi</li>
+            <li class="menu-header">Permintaan</li>
             <li class="">
                 <a class="nav-link" href="<?= base_url('PermintaanBahan/create') ?>"><i class="fas fa-paste"></i><span>Permintaan Bahan</span></a>
             </li>
+            <li class="menu-header">Transaksi</li>
             <li class="">
                 <a class="nav-link" href="<?= base_url('Pembelian/create') ?>"><i class="fas fa-boxes"></i><span>Pembelian</span></a>
             </li>

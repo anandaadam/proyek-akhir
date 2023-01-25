@@ -21,7 +21,7 @@ class Pembelian extends BaseController
     {
         $dataPembelian = $this->pembelianModel->indexPembelian();
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Data Transaksi Pembelian']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('transaksi/pembelian/index', ['dataPembelian' => $dataPembelian]);
@@ -38,7 +38,7 @@ class Pembelian extends BaseController
             'dataSupplier' => $dataSupplier,
         ];
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Tambah Data Transaksi Pembelian']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('transaksi/pembelian/create', $data);
@@ -75,7 +75,7 @@ class Pembelian extends BaseController
     {
         $dataPembelian = $this->pembelianModel->showPembelian($noTransaksiPembelian);
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Data Detail Transaksi Pembelian']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('transaksi/pembelian/show', ['dataPembelian' => $dataPembelian]);

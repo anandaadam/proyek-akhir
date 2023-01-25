@@ -2,11 +2,10 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Supplier</h1>
+            <h1>Tambah Data Supplier</h1>
         </div>
 
         <div class="section-body">
-
             <div class="col-12 col-md-6 col-lg-12">
                 <div class="card">
                     <form action="<?= base_url('Supplier/store') ?>" method="POST">
@@ -44,5 +43,6 @@
                 </div>
             </div>
         </div>
+
     </section>
 </div>

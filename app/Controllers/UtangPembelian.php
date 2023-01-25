@@ -17,7 +17,7 @@ class UtangPembelian extends BaseController
     {
         $dataUtangPembelian = $this->utangPembelianModel->indexUtangPembelian();
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Data Utang Pembelian']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('transaksi/utang-pembelian/index', ['dataUtangPembelian' => $dataUtangPembelian]);
@@ -28,7 +28,7 @@ class UtangPembelian extends BaseController
     {
         $dataUtangPembelian = $this->utangPembelianModel->showUtangPembelian($idUtangPembelian);
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Data Detail Pembayaran Utang Pembelian']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('transaksi/utang-pembelian/show', ['dataUtangPembelian' => $dataUtangPembelian]);

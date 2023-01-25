@@ -22,7 +22,7 @@ class PersediaanBahan extends BaseController
     {
         $dataPersediaanBahan = $this->persediaanBahanModel->indexPersediaanBahan();
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Data Persediaan Bahan']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('master-data/persediaan-bahan/index', ['dataPersediaanBahan' => $dataPersediaanBahan]);
@@ -38,7 +38,7 @@ class PersediaanBahan extends BaseController
             'messageValidation' => \Config\Services::validation(),
             'dataJenisSatuan' => $dataJenisSatuan
         ];
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Tambah Data Persediaan Bahan']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('master-data/persediaan-bahan/create', $data);
@@ -89,7 +89,7 @@ class PersediaanBahan extends BaseController
             'dataJenisSatuan' => $dataJenisSatuan
         ];
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Edit Data Persediaan Bahan']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('master-data/persediaan-bahan/edit', $data);

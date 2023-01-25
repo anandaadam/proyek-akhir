@@ -2,11 +2,10 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Pembayaran Utang Pembelian</h1>
+            <h1>Tambah Pembayaran Utang Pembelian</h1>
         </div>
 
         <div class="section-body">
-
             <div class="col-12 col-md-6 col-lg-12">
                 <div class="card">
                     <form action="<?= base_url('PembayaranUtangPembelian/store/' . $idUtangPembelian) ?>" method="POST">
@@ -45,5 +44,6 @@
                 </div>
             </div>
         </div>
+
     </section>
 </div>

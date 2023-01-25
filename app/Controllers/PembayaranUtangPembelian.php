@@ -26,7 +26,7 @@ class PembayaranUtangPembelian extends BaseController
             'idUtangPembelian' => $idUtangPembelian
         ];
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Tambah Data Pembayaran Utang Pembelian']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('transaksi/pembayaran-utang-pembelian/create', $data);

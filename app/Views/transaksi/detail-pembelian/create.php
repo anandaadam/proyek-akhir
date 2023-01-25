@@ -2,16 +2,13 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Transaksi Pembelian</h1>
+            <h1>Tambah Item Transaksi Pembelian</h1>
         </div>
 
         <div class="section-body">
             <div class="col-12 col-md-6 col-lg-12">
                 <div class="card p-3">
                     <form action="<?= base_url('DetailPembelian/save') ?>" method="POST">
-                        <!-- <div class="card-header">
-                            <h4>Data Transaksi</h4>
-                        </div> -->
                         <h5 class="text-primary">Data Pembelian</h5>
                         <div class="row">
                             <div class="form-group col-4">
@@ -39,8 +36,6 @@
                             </div>
                         </div>
 
-
-
                         <div class="text-right mb-4">
                             <button class="btn btn-success btn-tambah-bahan" type="button">Tambah</button>
                         </div>
@@ -63,11 +58,9 @@
                             <button class="btn btn-primary" type="submit">Submit</button>
                         </div>
                     </form>
-
-
                 </div>
             </div>
         </div>
-</div>
-</section>
+
+    </section>
 </div>

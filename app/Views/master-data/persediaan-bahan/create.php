@@ -2,7 +2,7 @@
 <div class="main-content">
     <section class="section">
         <div class="section-header">
-            <h1>Supplier</h1>
+            <h1>Tambah Data Persediaan Bahan</h1>
         </div>
 
         <div class="section-body">
@@ -47,7 +47,7 @@
                     </form>
                 </div>
             </div>
-
         </div>
+
     </section>
 </div>

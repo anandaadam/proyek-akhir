@@ -10,20 +10,18 @@ class BillOfMaterial extends BaseController
 {
     protected $billOfMaterialModel;
     protected $persediaanBahanModel;
-    protected $session;
 
     public function __construct()
     {
         $this->billOfMaterialModel = new BillOfMaterialModel();
         $this->persediaanBahanModel = new PersediaanBahanModel();
-        $this->session = session();
     }
 
     public function index()
     {
         $dataBillOfMaterial = $this->billOfMaterialModel->indexBillOfMaterial();
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Data Bill Of Material']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('master-data/bill-of-material/index', ['dataBillOfMaterial' => $dataBillOfMaterial]);
@@ -44,7 +42,7 @@ class BillOfMaterial extends BaseController
 
         $page = $idBom ? 'add' : 'create';
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Tambah Data Bill Of Material']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view("master-data/bill-of-material/{$page}", $data);
@@ -63,7 +61,7 @@ class BillOfMaterial extends BaseController
     {
         $dataBillOfMaterial = $this->billOfMaterialModel->showBillOfMaterial($idBom);
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Data Detail Bill Of Material']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('master-data/bill-of-material/show', ['dataBillOfMaterial' => $dataBillOfMaterial]);
@@ -79,7 +77,7 @@ class BillOfMaterial extends BaseController
             'idBom' => $idBom
         ];
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Edit Data Bill Of Material']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('master-data/bill-of-material/edit', $data);
@@ -100,7 +98,7 @@ class BillOfMaterial extends BaseController
             'idBom' => $idBom
         ];
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Hapus Data Bill Of Material']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('master-data/bill-of-material/delete', $data);

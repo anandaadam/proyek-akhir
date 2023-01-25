@@ -19,7 +19,7 @@ class Supplier extends BaseController
     {
         $dataSupplier = $this->supplierModel->indexSupplier();
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Data Supplier']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('master-data/supplier/index', ['dataSupplier' => $dataSupplier]);
@@ -33,7 +33,7 @@ class Supplier extends BaseController
             'messageValidation' => \Config\Services::validation()
         ];
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Tambah Data Supplier']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('master-data/supplier/create', $data);
@@ -83,7 +83,7 @@ class Supplier extends BaseController
             'dataSupplier' => $dataSupplier
         ];
 
-        echo view('layouts/header');
+        echo view('layouts/header', ['tittle' => 'Edit Data Supplier']);
         echo view('layouts/body');
         echo view('layouts/sidebar');
         echo view('master-data/supplier/edit', $data);
