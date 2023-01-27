@@ -49,21 +49,27 @@ class PersediaanBahan extends BaseController
     {
         if (!$this->validate([
             'nama_bahan' => [
-                'rules' => 'required',
+                'rules' => 'required|min_length[3]|max_length[100]',
                 'errors' => [
-                    'required' => 'Nama bahan wajib diisi'
+                    'required' => 'Nama bahan wajib diisi',
+                    'min_length' => 'Panjang minimal nama bahan adalah 3',
+                    'max_length' => 'Panjang maksimal nama bahan adalah 50'
                 ]
             ],
             'harga_bahan' => [
-                'rules' => 'required',
+                'rules' => 'required|greater_than[0]|max_length[11]',
                 'errors' => [
-                    'required' => 'Harga bahan wajib diisi'
+                    'required' => 'Harga bahan wajib diisi',
+                    'max_length' => 'Besar maksimal harga bahan adalah 11 digit',
+                    'greater_than' => 'Harga bahan tidak boleh diisi 0'
                 ]
             ],
             'stok_bahan' => [
-                'rules' => 'required',
+                'rules' => 'required|max_length[50]|greater_than[0]',
                 'errors' => [
                     'required' => 'Stok bahan wajib diisi',
+                    'max_length' => 'Besar maksimal stok bahan adalah 11 digit',
+                    'greater_than' => 'Stok bahan tidak boleh diisi 0'
                 ]
             ]
         ])) {
@@ -100,27 +106,27 @@ class PersediaanBahan extends BaseController
     {
         if (!$this->validate([
             'nama_bahan' => [
-                'rules' => 'required',
+                'rules' => 'required|min_length[3]|max_length[100]',
                 'errors' => [
-                    'required' => 'Nama bahan wajib diisi'
+                    'required' => 'Nama bahan wajib diisi',
+                    'min_length' => 'Panjang minimal nama bahan adalah 3',
+                    'max_length' => 'Panjang maksimal nama bahan adalah 50'
                 ]
             ],
             'harga_bahan' => [
-                'rules' => 'required',
+                'rules' => 'required|greater_than[0]|max_length[11]',
                 'errors' => [
-                    'required' => 'Harga bahan wajib diisi'
+                    'required' => 'Harga bahan wajib diisi',
+                    'max_length' => 'Besar maksimal harga bahan adalah 11 digit',
+                    'greater_than' => 'Harga bahan tidak boleh diisi 0'
                 ]
             ],
             'stok_bahan' => [
-                'rules' => 'required',
+                'rules' => 'required|max_length[11]|greater_than[0]',
                 'errors' => [
                     'required' => 'Stok bahan wajib diisi',
-                ]
-            ],
-            'jenis_satuan' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'jenis_satuan wajib diisi'
+                    'max_length' => 'Besar maksimal stok bahan adalah 11 digit',
+                    'greater_than' => 'Stok bahan tidak boleh diisi 0'
                 ]
             ],
         ])) {

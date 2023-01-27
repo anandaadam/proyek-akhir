@@ -8,6 +8,7 @@ class Supplier extends BaseController
 {
     protected $supplierModel;
     protected $session;
+    protected $teleponSupplier;
 
     public function __construct()
     {
@@ -44,22 +45,28 @@ class Supplier extends BaseController
     {
         if (!$this->validate([
             'nama_supplier' => [
-                'rules' => 'required',
+                'rules' => 'required|min_length[3]|max_length[100]',
                 'errors' => [
-                    'required' => 'Nama Supplier wajib diisi'
+                    'required' => 'Nama Supplier wajib diisi',
+                    'min_length' => 'Panjang minimal nama supplier adalah 3',
+                    'max_length' => 'Panjang maksimal nama supplier adalah 50'
                 ]
             ],
             'telepon_supplier' => [
-                'rules' => 'required|is_unique[supplier.telepon_supplier]',
+                'rules' => 'required|is_unique[supplier.telepon_supplier]|min_length[100]|max_length[13]',
                 'errors' => [
                     'required' => 'Telepon supplier wajib diisi',
-                    'is_unique' => 'Telepon supplier sudah terdaftar'
+                    'is_unique' => 'Telepon supplier sudah terdaftar',
+                    'min_length' => 'Panjang minimal telepon supplier adalah 3',
+                    'max_length' => 'Panjang maksimal telepon supplier adalah 50'
                 ]
             ],
             'alamat_supplier' => [
-                'rules' => 'required',
+                'rules' => 'required|min_length[10]|max_length[250]',
                 'errors' => [
-                    'required' => 'Alamat supplier wajib diisi'
+                    'required' => 'Alamat supplier wajib diisi',
+                    'min_length' => 'Panjang minimal alamat supplier adalah 10',
+                    'max_length' => 'Panjang maksimal alamat supplier adalah 250'
                 ]
             ]
         ])) {
@@ -77,6 +84,7 @@ class Supplier extends BaseController
     public function edit($idSupplier)
     {
         session();
+        // $this->teleponSupplier = $idSupplier;
         $dataSupplier = $this->supplierModel->editSupplier($idSupplier);
         $data = [
             'messageValidation' => \Config\Services::validation(),
@@ -92,23 +100,32 @@ class Supplier extends BaseController
 
     public function update()
     {
+        $teleponSupplier = $this->request->getVar('telepon_supplier');
+        $statusAktif = 0;
         if (!$this->validate([
             'nama_supplier' => [
-                'rules' => 'required',
+                'rules' => 'required|min_length[3]|max_length[100]',
                 'errors' => [
-                    'required' => 'Nama Supplier wajib diisi'
+                    'required' => 'Nama Supplier wajib diisi',
+                    'min_length' => 'Panjang minimal nama supplier adalah 3',
+                    'max_length' => 'Panjang maksimal nama supplier adalah 50'
                 ]
             ],
             'telepon_supplier' => [
-                'rules' => 'required',
+                'rules' => "required|is_unique[supplier.telepon_supplier,telepon_supplier,{$teleponSupplier}]min_length[10]|max_length[13]",
                 'errors' => [
                     'required' => 'Telepon supplier wajib diisi',
+                    'is_unique' => 'Telepon supplier sudah terdaftar',
+                    'min_length' => 'Panjang minimal telepon supplier adalah 3',
+                    'max_length' => 'Panjang maksimal telepon supplier adalah 50'
                 ]
             ],
             'alamat_supplier' => [
-                'rules' => 'required',
+                'rules' => 'required||min_length[10]|max_length[250]',
                 'errors' => [
-                    'required' => 'Alamat supplier wajib diisi'
+                    'required' => 'Alamat supplier wajib diisi',
+                    'min_length' => 'Panjang minimal alamat supplier adalah 10',
+                    'max_length' => 'Panjang maksimal alamat supplier adalah 250'
                 ]
             ]
         ])) {

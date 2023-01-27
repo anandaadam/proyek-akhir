@@ -1,0 +1,60 @@
+ERROR - 2023-01-26 16:45:07 --> mysqli_sql_exception: Unknown column 'ignore_supplier' in 'where clause' in C:\xampp82\htdocs\proyek-akhir\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp82\htdocs\proyek-akhir\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\xampp82\htdocs\proyek-akhir\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\xampp82\htdocs\proyek-akhir\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\xampp82\htdocs\proyek-akhir\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\xampp82\htdocs\proyek-akhir\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp82\htdocs\proyek-akhir\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('08216781271', 'telepon_supplie...', Array, NULL, 'telepon_supplie...')
+#6 C:\xampp82\htdocs\proyek-akhir\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('telepon_supplie...', 'telepon_supplie...', '08216781271', Array, Array)
+#7 C:\xampp82\htdocs\proyek-akhir\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 C:\xampp82\htdocs\proyek-akhir\app\Controllers\Supplier.php(105): CodeIgniter\Controller->validate(Array)
+#9 C:\xampp82\htdocs\proyek-akhir\system\CodeIgniter.php(927): App\Controllers\Supplier->update()
+#10 C:\xampp82\htdocs\proyek-akhir\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+#11 C:\xampp82\htdocs\proyek-akhir\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp82\htdocs\proyek-akhir\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp82\htdocs\proyek-akhir\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp82\\htdo...')
+#14 {main}
+CRITICAL - 2023-01-26 16:45:07 --> Unknown column 'ignore_supplier' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT 1
+FROM `supplier`
+WHERE `telepon_supplier` = \'08216781271\'
+AND `ignore_supplier` != \'ignore_\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1
+FROM `supplier`
+WHERE `telepon_supplier` = \'08216781271\'
+AND `ignore_supplier` != \'ignore_\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1
+FROM `supplier`
+WHERE `telepon_supplier` = \'08216781271\'
+AND `ignore_supplier` != \'ignore_\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `supplier`
+WHERE `telepon_supplier` = :telepon_supplier:
+AND `ignore_supplier` != :ignore_supplier:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('08216781271', 'telepon_supplier', [...], null, 'telepon_supplier')
+ 7 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('telepon_supplier', 'telepon_supplier', '08216781271', [...], [...])
+ 8 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 9 APPPATH\Controllers\Supplier.php(105): CodeIgniter\Controller->validate([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->update()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-26 16:53:21 --> strpos(): Argument #3 ($offset) must be contained in argument #1 ($haystack)
+in SYSTEMPATH\Validation\Validation.php on line 807.
+ 1 SYSTEMPATH\Validation\Validation.php(807): strpos('required|is_unique[supplier.status_aktif,0', '|', 43)
+ 2 SYSTEMPATH\Validation\Validation.php(145): CodeIgniter\Validation\Validation->splitRules([...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Supplier.php(105): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Supplier->update()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Supplier))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

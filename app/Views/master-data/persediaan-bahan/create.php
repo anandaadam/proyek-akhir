@@ -30,10 +30,18 @@
                                     <?php } ?>
                                 </select>
                             </div>
+
                             <div class="form-group">
                                 <label>Harga Bahan</label>
-                                <input type="number" id="harga_bahan" class="form-control <?= ($messageValidation->hasError('harga_bahan')) ? 'is-invalid' : '' ?>" name="harga_bahan" placeholder="Silahkan isi harga bahan" value="<?= old('harga_bahan') ?>">
-                                <div class="invalid-feedback"><?= $messageValidation->getError('harga_bahan') ?></div>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            Rp
+                                        </div>
+                                    </div>
+                                    <input type="text" id="harga_bahan" name="harga_bahan" class="form-control currency harga-bahan <?= ($messageValidation->hasError('harga_bahan')) ? 'is-invalid' : '' ?>" placeholder="Silahkan isi harga bahan" value="<?= old('harga_bahan') ?>">
+                                    <div class="invalid-feedback"><?= $messageValidation->getError('harga_bahan') ?></div>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label>Stok Bahan</label>

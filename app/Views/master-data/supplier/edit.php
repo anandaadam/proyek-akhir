@@ -41,6 +41,7 @@
                                             </div>
                                         </div>
                                         <input type="text" id="telepon_supplier" name="telepon_supplier" class="form-control phone-number telepon-supplier form-update-master-data <?= ($messageValidation->hasError('telepon_supplier')) ? 'is-invalid' : '' ?>" name="telepon_supplier" placeholder="Silahkan isi telepon supplier" value="<?php if ($messageValidation->hasError('telepon_supplier')) { ?> <?= old('telepon_supplier') ?> <?php } elseif (!$messageValidation->hasError('telepon_supplier')) { ?> <?php if (!old('telepon_supplier')) { ?> <?= $teleponSupplier ?> <?php  } else { ?> <?= old('telepon_supplier') ?> <?php } ?> <?php } ?>" placeholder="Silahkan isi telepon supplier" value="<?= old('telepon_supplier') ?>" />
+                                        <div class="invalid-feedback"><?= $messageValidation->getError('telepon_supplier') ?></div>
                                     </div>
                                 </div>
                                 <div class="form-group mb-0">

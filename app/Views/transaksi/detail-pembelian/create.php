@@ -24,7 +24,7 @@
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">
-                                            $
+                                            Rp
                                         </div>
                                     </div>
                                     <input type="text" name="harga_pembelian" class="form-control currency harga-pembelian <?= ($messageValidation->hasError('harga_pembelian')) ? 'is-invalid' : '' ?>">
